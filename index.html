@@ -12,7 +12,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
-
+    body {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE/Edge */
+  user-select: none;         /* Standard */
+}
 /* Compact yet attractive add-ons styles */
     .add-ons-section {
       background: linear-gradient(to bottom, #fffdf5, #fff9d1);
@@ -172,9 +177,9 @@
       font-weight: 800;
       font-size: 1.3em;
       color: #d84315;
-      padding: 8px 25px;
+      padding: 5px 15px;
       border-radius: 30px;
-      margin-top: 10px;
+      margin-top: 5px;
       border: 3px solid #ff9800;
       animation: pulse 2s infinite;
       text-transform: uppercase;
