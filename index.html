@@ -203,7 +203,52 @@
       border-color: #f5b700;
       text-shadow: 1px 1px 4px black;
     }
+    .july-banner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: linear-gradient(135deg, #f5b700 0%, #d84315 100%);
+      color: white;
+      padding: 14px 20px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1.2em;
+      margin: 20px auto;
+      max-width: 95%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid rgba(255,255,255,0.5);
+    }
     
+    .july-banner i {
+      font-size: 1.4em;
+      min-width: 30px;
+      text-align: center;
+    }
+    
+    .july-banner .date-highlight {
+      background: white;
+      color: #d84315;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-weight: 800;
+      margin: 0 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .july-banner-content {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .july-banner-content span {
+      display: block;
+      line-height: 1.4;
+    }
     .free-delivery-banner {
       display: flex;
       align-items: center;
@@ -888,6 +933,13 @@
     <i class="fas fa-map-marker-alt"></i> Made in Moga
   </div>
 </div>
+   <div class="july-banner">
+    <i class="fas fa-calendar-alt"></i>
+    <div class="july-banner-content">
+      <span>We're launching our tiffin service starting from</span>
+      <span><span class="date-highlight">2nd July 2025</span>
+    </div>
+  </div>
   <div class="free-delivery-banner">
     <img src="https://img.icons8.com/ios-filled/50/fa314a/delivery.png" alt="Free Delivery">
     Free Delivery on All Tiffin Plans!
