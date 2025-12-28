@@ -18,124 +18,419 @@
   -ms-user-select: none;     /* IE/Edge */
   user-select: none;         /* Standard */
 }
-/* Compact yet attractive add-ons styles */
-    .add-ons-section {
-      background: linear-gradient(to bottom, #fffdf5, #fff9d1);
-      border-radius: 10px;
-      padding: 12px;
-      margin: 15px auto;
-      max-width: 460px;
-      text-align: center;
-      border: 1px solid #f5b700;
-      box-shadow: 0 3px 10px rgba(245, 183, 0, 0.2);
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .add-ons-section::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      background: linear-gradient(90deg, #f5b700, #d84315, #f5b700);
-    }
-    
-    .add-ons-title {
-      margin: 0 0 10px;
-      color: #5c3d00;
-      font-weight: 700;
-      font-size: 1em;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
-    
-    .add-ons-title i {
-      color: #d84315;
-      font-size: 1.1em;
-    }
-    
-    .add-ons-list {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 5px;
-      flex-wrap: wrap;
-    }
-    
-    .add-on-item {
-      background: white;
-      border-radius: 8px;
-      padding: 10px 12px;
-      min-width: 100px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: all 0.3s ease;
-      border: 1px solid #f5b700;
-    }
-    
-    .add-on-item:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 10px rgba(245, 183, 0, 0.3);
-    }
-    
-    .add-on-icon {
-      font-size: 1.5em;
-      margin-bottom: 5px;
-      display: block;
-      color: #d84315;
-    }
-    
-    .add-on-name {
-      font-weight: 600;
-      color: #5c3d00;
-      margin-bottom: 2px;
-      font-size: 0.95em;
-    }
-    
-    .add-on-price {
-      color: #d84315;
-      font-weight: 700;
-      font-size: 0.95em;
-    }
-    
-    .add-ons-section p {
-      margin-top: 10px;
-      font-size: 0.9em;
-      color: #5c3d00;
-      font-style: italic;
-    }
- /* Mobile optimization */
-    @media (max-width: 480px) {
-      .add-ons-section {
-        padding: 10px;
-        margin: 12px auto;
-        max-width: 90%;
-      }
-      
-      .add-ons-list {
-        gap: 8px;
-      }
-      
-      .add-on-item {
-        padding: 8px 10px;
-        min-width: 90px;
-      }
-      
-      .add-on-icon {
-        font-size: 1.3em;
-      }
-      
-      .add-on-name {
-        font-size: 0.9em;
-      }
-      
-      .add-on-price {
-        font-size: 0.9em;
-      }
-    }
+
+/* FSSAI License Badge Styles - UPDATED with larger logo */
+.fssai-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(to right, #f8fff8, #ffffff);
+  border: 1.5px solid #28a745;
+  border-radius: 12px;
+  padding: 8px 20px;
+  margin: 10px auto;
+  max-width: 320px;
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.15);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.fssai-badge:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(40, 167, 69, 0.25);
+  background: linear-gradient(to right, #ffffff, #f8fff8);
+}
+
+.fssai-badge::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to bottom, #28a745, #20c997);
+}
+
+.fssai-logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  filter: brightness(0.85);
+  transition: transform 0.3s ease;
+}
+
+.fssai-badge:hover .fssai-logo {
+  transform: scale(1.1);
+}
+
+.fssai-text {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.95em;
+  color: #2e7d32;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.fssai-number {
+  color: #d84315;
+  font-weight: 800;
+  margin-left: 3px;
+  font-size: 1.05em;
+}
+
+/* Mobile responsive adjustments for FSSAI badge */
+@media (max-width: 480px) {
+  .fssai-badge {
+    padding: 7px 16px;
+    max-width: 300px;
+    gap: 10px;
+  }
+  
+  .fssai-logo {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .fssai-text {
+    font-size: 0.9em;
+  }
+  
+  .fssai-number {
+    font-size: 1em;
+  }
+}
+
+/* Special Sweet Dishes Section - UPDATED */
+.special-sweets-section {
+  background: linear-gradient(135deg, #fff5f5 0%, #ffeef0 100%);
+  border-radius: 20px;
+  padding: 30px 20px;
+  margin: 40px auto;
+  max-width: 900px;
+  text-align: center;
+  border: 3px solid #f5b700;
+  box-shadow: 0 10px 30px rgba(245, 183, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.special-sweets-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #ff6b6b, #f5b700, #ff6b6b);
+}
+
+.sweet-dishes-header {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.sweet-dishes-header h3 {
+  color: #d84315;
+  font-size: 2.2em;
+  font-weight: 700;
+  margin: 0 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-family: 'Playfair Display', serif;
+}
+
+.sweet-dishes-header h3 i {
+  color: #ff6b6b;
+  font-size: 1.8em;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.sweet-dishes-subtitle {
+  color: #5c3d00;
+  font-size: 1.1em;
+  font-style: italic;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.sweets-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.sweet-item {
+  background: white;
+  border-radius: 15px;
+  padding: 25px 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  border: 2px solid #ffe082;
+  position: relative;
+  overflow: hidden;
+}
+
+.sweet-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(255, 107, 107, 0.3);
+  border-color: #ff6b6b;
+}
+
+.sweet-icon {
+  font-size: 3em;
+  margin-bottom: 15px;
+  color: #ff6b6b;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.sweet-item:hover .sweet-icon {
+  transform: rotate(10deg) scale(1.2);
+}
+
+.sweet-name {
+  font-size: 1.4em;
+  font-weight: 700;
+  color: #d84315;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+.sweet-description {
+  color: #5c3d00;
+  font-size: 0.95em;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  padding: 0 10px;
+}
+
+.sweet-price {
+  background: linear-gradient(135deg, #f5b700, #ff6b6b);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 1.2em;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(245, 183, 0, 0.3);
+}
+
+/* Sweet Dish Images */
+.sweet-image {
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.sweet-item:hover .sweet-image {
+  transform: scale(1.05);
+}
+
+.sweets-cta {
+  margin-top: 40px;
+  padding: 15px 40px;
+  background: linear-gradient(135deg, #ff6b6b, #f5b700);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(255, 107, 107, 0.4);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sweets-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(255, 107, 107, 0.5);
+  background: linear-gradient(135deg, #f5b700, #ff6b6b);
+}
+
+.sweets-cta i {
+  font-size: 1.3em;
+}
+
+.sweets-notice {
+  margin-top: 25px;
+  color: #5c3d00;
+  font-size: 0.95em;
+  font-style: italic;
+  background: #fff9d1;
+  padding: 12px 20px;
+  border-radius: 10px;
+  border-left: 4px solid #f5b700;
+}
+
+/* Mobile optimization for sweets section */
+@media (max-width: 768px) {
+  .special-sweets-section {
+    margin: 30px 15px;
+    padding: 25px 15px;
+  }
+  
+  .sweet-dishes-header h3 {
+    font-size: 1.8em;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .sweets-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .sweet-item {
+    padding: 20px 15px;
+  }
+  
+  .sweet-image {
+    height: 150px;
+  }
+  
+  .sweets-cta {
+    padding: 12px 30px;
+    font-size: 1.1em;
+  }
+}
+
+/* Compact yet attractive add-ons styles - UPDATED */
+.add-ons-section {
+  background: linear-gradient(to bottom, #fffdf5, #fff9d1);
+  border-radius: 10px;
+  padding: 12px;
+  margin: 15px auto;
+  max-width: 460px;
+  text-align: center;
+  border: 1px solid #f5b700;
+  box-shadow: 0 3px 10px rgba(245, 183, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.add-ons-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #f5b700, #d84315, #f5b700);
+}
+
+.add-ons-title {
+  margin: 0 0 10px;
+  color: #5c3d00;
+  font-weight: 700;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.add-ons-title i {
+  color: #d84315;
+  font-size: 1.1em;
+}
+
+.add-ons-list {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 5px;
+  flex-wrap: wrap;
+}
+
+.add-on-item {
+  background: white;
+  border-radius: 8px;
+  padding: 10px 12px;
+  min-width: 100px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #f5b700;
+}
+
+.add-on-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(245, 183, 0, 0.3);
+}
+
+.add-on-icon {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+  display: block;
+  color: #d84315;
+}
+
+.add-on-name {
+  font-weight: 600;
+  color: #5c3d00;
+  margin-bottom: 2px;
+  font-size: 0.95em;
+}
+
+.add-on-price {
+  color: #d84315;
+  font-weight: 700;
+  font-size: 0.95em;
+}
+
+.add-ons-section p {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #5c3d00;
+  font-style: italic;
+}
+
+/* Mobile optimization */
+@media (max-width: 480px) {
+  .add-ons-section {
+    padding: 10px;
+    margin: 12px auto;
+    max-width: 90%;
+  }
+  
+  .add-ons-list {
+    gap: 8px;
+  }
+  
+  .add-on-item {
+    padding: 8px 10px;
+    min-width: 90px;
+  }
+  
+  .add-on-icon {
+    font-size: 1.3em;
+  }
+  
+  .add-on-name {
+    font-size: 0.9em;
+  }
+  
+  .add-on-price {
+    font-size: 0.9em;
+  }
+}
     * {
       box-sizing: border-box;
     }
@@ -155,14 +450,35 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-    header h1 {
-      margin: 0;
-      font-family: 'Playfair Display', serif;
-      font-size: 2em;
-      font-weight: 700;
-      color: #5c3d00;
-      text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.6);
-    }
+    .brand-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6em;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #5c3d00;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  text-shadow: 
+    1px 1px 0 #fff,
+    2px 2px 6px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease;
+}
+
+/* Highlight "Eats" */
+.brand-name span {
+  color: #d84315;
+  font-weight: 800;
+  position: relative;
+}
+
+/* Remove underline: delete ::after block */
+
+/* Hover effect */
+.brand-name:hover {
+  transform: scale(1.05);
+  letter-spacing: 2px;
+}
 
     header .tagline {
       margin-top: 10px;
@@ -333,26 +649,44 @@
       right: 10px;
       transform: rotate(180deg);
     }
-     /* FIXED: Made in Moga banner */
-    .made-in-moga {
-      display: inline-block;
-      background: linear-gradient(135deg, #f5b700 0%, #d84315 100%);
-      color: white;
-      padding: 8px 25px;
-      border-radius: 30px;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      font-size: 1.1em;
-      margin: 15px auto 0; /* Added auto margins for centering */
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      position: relative;
-      overflow: hidden;
-      transition: all 0.3s ease;
-      border: 2px solid #fff;
-      text-align: center; /* Ensure text is centered */
-      width: fit-content; /* Fit content width */
-      max-width: 90%; /* Prevent overflow on mobile */
-    }
+   .made-in-moga {
+  display: inline-block;
+  background: linear-gradient(135deg, #f5b700 0%, #d84315 100%);
+  color: white;
+  padding: 8px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 1.1em;
+  margin: 5px auto 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+
+/* 🔥 Hover Effect */
+.made-in-moga:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(216, 67, 21, 0.5);
+  background: linear-gradient(135deg, #d84315 0%, #f5b700 100%);
+}
+
+/* Icon animation on hover */
+.made-in-moga:hover i {
+  animation: locationBounce 0.6s ease;
+}
+
+/* Icon bounce keyframes */
+@keyframes locationBounce {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-5px); }
+  60%  { transform: translateY(2px); }
+  100% { transform: translateY(0); }
+}
+
 
     /* Adjust hero section to accommodate new tagline */
     .hero-content {
@@ -502,11 +836,14 @@
       font-size: 1.1em;
     }
 
+    /* UPDATED: Centered Sunday closed note */
     .note {
       color: #FF0000;
- font-size: 1.1em;
+      font-size: 1.1em;
       font-weight: bold;
       margin-top: 30px;
+      text-align: center;
+      padding: 0 20px;
     }
 .timing-info {
       background: #fff9e6;
@@ -573,6 +910,7 @@
     .catering-info:hover {
       transform: scale(1.03);
     }
+
 
     footer {
       background-color: #f5b700;
@@ -917,22 +1255,35 @@
 </head>
 <body>
 <header>
-  <h1>Amarjoti Eats</h1>
-  <p class="tagline">Homemade Tiffins Full Of Love</p>
+  <h1 class="brand-name">
+  Amarjoti <span>Eats</span>
+</h1>
+
+  <p class="tagline">Homemade Tiffins & Sweets Full Of Love</p>
   <div class="divider"></div>
 </header>
 
   <nav>
     <a href="#about">About</a>
     <a href="#plans">Plans</a>
+    <a href="#sweets">Sweets</a>
     <a href="#reviews">Reviews</a>
     <a href="#contact">Contact</a>
   </nav>
-  <div style="text-align: center;">
-  <div class="made-in-moga">
-    <i class="fas fa-map-marker-alt"></i> Made in Moga
+  
+  <!-- FSSAI License Badge -->
+  <div class="fssai-badge">
+    <img src="https://freepnglogo.com/images/all_img/1707841493fssai-logo-png.png" alt="FSSAI Logo" class="fssai-logo">
+    <span class="fssai-text">License No: <span class="fssai-number">12345678901234</span></span>
   </div>
-</div>
+  
+  <!-- Made in Moga Badge -->
+  <div style="text-align: center;">
+    <div class="made-in-moga">
+      <i class="fas fa-map-marker-alt"></i> Made in Moga
+    </div>
+  </div>
+  
    <div class="july-banner">
     <div class="july-banner-content">
       <span><span class="date-highlight">Order Now🤩</span>
@@ -959,46 +1310,46 @@
   <section id="about" class="section">
     <h3>Why Choose Amarjoti Eats?</h3>
     <p>
-      We offer fresh, home-cooked meals with love and care. Perfect for working professionals, students, and elders who miss the taste of home.
+      "We offer fresh, home-cooked meals and homemade sweets prepared with love and care—perfect for working professionals, students, and elders who miss the taste of home."
     </p>
   </section>
 
-  <section id="plans" class="section">
-    <h3>Our Tiffin Plans</h3>
-    <div class="tiffin-plans">
-      <div class="plan">
-        <h4>Basic Veg Plan</h4>
-        <p><strong>₹60</strong></p>
-        <p>1 Sabzi + 4 Roti + Salad + Achar</p>
-        <p> Lunch Or Dinner </p>
-      </div>
-      <div class="plan">
-        <h4>Executive Veg Plan</h4>
-         <p><strong>₹90</strong></p>
-        <p>2 Sabzi + 4 Roti + Rice + Salad + Achar</p>
-        <p> Lunch Or Dinner </p>
-      </div>
-      <div class="plan">
-        <h4>Weekend Special Plan</h4>
-        <p><strong>₹100</strong></p>
-        <p style="color: red;"> (Every Saturday) </p>
-        <p> 2 sabzi (One Special Sabzi) + 4 Roti + Rice + Salad + Achar </p>
-        <p> “Add Delicious Sweet Dish @ ₹20” </p>
-        <p> Lunch Or Dinner </p>
-      </div>
-      <div class="plan special-offer" style="border: 3px dashed #f57c00; background-color: #fff3e0;">
-        <h4 style="color: #e65100;">🔥 Special Offer Plan 🔥</h4>
-        <p> Lunch Or Dinner </p>
-        <p><strong>Just ₹1199 for 15 days!</strong></p>
-        <p>Enjoy the Executive Plan & Weekend Special With::</p>
-        <ul>
-          <li>Free Delivery</li>
-          <li>Daily Fresh Meals</li>
-          <li>Hygienically Packed</li>
-          <li>Perfect for Working Professionals</li>
-        </ul>
-      </div>
+ <section id="plans" class="section">
+  <h3>Our Tiffin Plans</h3>
+
+  <div class="tiffin-plans">
+
+    <div class="plan">
+      <h4>Mini Veg Plan</h4>
+      <p><strong>₹60</strong></p>
+      <p>Choose 1 Sabzi (from 3) + 4 Roti + Salad - Achar</p>
+      <p>Lunch or Dinner</p>
     </div>
+
+    <div class="plan">
+      <h4>Regular Veg Plan</h4>
+      <p><strong>₹75</strong></p>
+      <p>Choose 1 Sabzi (from 3) + 4 Roti + Curd + Salad - Achar</p>
+      <p>Lunch or Dinner</p>
+    </div>
+
+    <div class="plan">
+      <h4>Deluxe Veg Plan</h4>
+      <p><strong>₹90</strong></p>
+      <p>Choose 2 Sabzis (from 3) + 4 Roti + Rice + Salad - Achar</p>
+      <p>Lunch or Dinner</p>
+    </div>
+
+    <div class="plan special-offer" style="border: 3px dashed #f57c00; background-color: #fff3e0;">
+      <h4 style="color: #e65100;">🔥 Premium Meal Plan 🔥</h4>
+      <p><strong>₹120</strong></p>
+      <p>2 Sabzis + 4 Roti + Rice + Salad - Achar + Sweet (Small)</p>
+      <p>Lunch or Dinner</p>
+    </div>
+
+  </div>
+</section>
+
  <div class="add-ons-section">
       <h4 class="add-ons-title">
         <i class="fas fa-plus-circle"></i> Customize your meal
@@ -1009,7 +1360,7 @@
       <div class="add-ons-list">
         <div class="add-on-item">
           <i class="fas fa-blender add-on-icon"></i>
-          <div class="add-on-name">Fresh Curd Or Boondi Raita</div>
+          <div class="add-on-name">Fresh Curd </div>
           <div class="add-on-price">₹10</div>
         </div>
         <div class="add-on-item">
@@ -1028,22 +1379,73 @@
           <div class="add-on-name">Extra Roti</div>
           <div class="add-on-price">₹5</div>
         </div>
-    <div class="add-on-item">
-      <i class="fas fa-glass-whiskey add-on-icon"></i>
-      <div class="add-on-name">Namkeen & Sweet Lassi</div>
-      <div class="add-on-price">₹25</div>
-    </div>
   </div>
       <p>Add these to any meal!</p>
     </div>
-    <div class="catering-info">
-      <p>
-        Beyond our everyday tiffin delights, Amarjoti Eats proudly 
-        <u>offers catering services for small corporate events</u> — crafted with the same homemade care and hygiene you trust. 
-        <span class="meal-notice" style="display: block; margin: 10px 0;">We provide lunch and dinner services</span>
-        We also provide <u>high-quality tea and coffee containers</u> to keep your guests refreshed and energized throughout your gatherings. Let us bring warmth, taste, and professionalism to your next event!
-      </p>
+  </section>
+
+  <!-- NEW: Special Sweet Dishes Section with Images -->
+  <section id="sweets" class="special-sweets-section">
+    <div class="sweet-dishes-header">
+      <h3><i class="fas fa-crown"></i> Amarjoti Eats Special Sweet Dishes <i class="fas fa-heart"></i></h3>
+      <p class="sweet-dishes-subtitle">Celebrate your special moments with our traditional homemade sweets, made with love and finest ingredients</p>
     </div>
+    
+    <div class="sweets-container">
+      <div class="sweet-item">
+        <img src="https://i.ytimg.com/vi/_6pc76DnDE0/maxresdefault.jpg" alt="Sweet Breads" class="sweet-image">
+        <h4 class="sweet-name">🍞 Sweet Breads</h4>
+        <p class="sweet-description">Soft, fluffy homemade sweet breads infused with cardamom and saffron, perfect for celebrations</p>
+        <div class="sweet-price">₹50 per piece</div>
+      </div>
+      
+      <div class="sweet-item">
+        <img src="https://media.istockphoto.com/id/692446072/photo/most-famous-indian-sweet-pudding-kheer-or-semiya-khir-in-a-bowl-selective-focus.jpg?s=612x612&w=0&k=20&c=EYeuMLOgqpcFRtrDJ8KPGdxPjlUOrBhUwgjzU0Jwt5k=" class="sweet-image">
+        <h4 class="sweet-name">🍜 Sewaiyan</h4>
+        <p class="sweet-description">Traditional vermicelli pudding cooked with milk, dry fruits, and aromatic spices - a festive favorite</p>
+        <div class="sweet-price">₹50 per serving</div>
+      </div>
+      
+      <div class="sweet-item">
+        <img src="https://shivanilovesfood.com/wp-content/uploads/2024/01/Creamy-Kheer-4.jpg" alt="Dry Fruits Kheer" class="sweet-image">
+        <h4 class="sweet-name">🍨 Dry Fruits Kheer</h4>
+        <p class="sweet-description">Rich rice pudding loaded with almonds, pistachios, cashews, and flavored with rose water.........</p>
+        <div class="sweet-price">₹50 per bowl</div>
+      </div>
+    </div>
+    
+    <button class="sweets-cta" onclick="orderSweets()">
+      <i class="fab fa-whatsapp"></i> Order Sweet Dishes on WhatsApp
+    </button>
+    
+    <p class="sweets-notice">
+      <i class="fas fa-info-circle"></i> Available on order (24 hours advance notice required). Perfect for festivals, birthdays, and special occasions!
+    </p>
+  </section>
+
+   <div class="catering-info">
+  <p>
+    Beyond our everyday tiffin delights, Amarjoti Eats proudly
+    <u>offers catering services for small corporate events</u> — crafted with the same homemade care, taste, and hygiene you trust.
+  </p>
+
+<p style="margin: 15px 0; font-weight: 600; text-align: center;">
+  🍽️ We provide <u>lunch and dinner services</u>
+</p>
+
+  <p style="margin: 15px 0;">
+    🍰 We also serve <u>delicious homemade sweets like kheer, sewaiyan, and sweet breads</u>, perfect for adding a sweet touch to your events.
+  </p>
+
+  <p style="margin: 15px 0;">
+    ☕ Additionally, we provide <u>high-quality tea and coffee containers</u> to keep your guests refreshed and energized throughout your gatherings.
+  </p>
+
+  <p style="margin-top: 20px; font-weight: 700;">
+    Let us bring warmth, taste, and professionalism to your next event!
+  </p>
+</div>
+
     <div class="call-now-container">
       <a href="tel:+919646432566" class="call-button" id="fixedCallButton">
         <i class="fas fa-phone"></i> Call Now: +91-9646432566
@@ -1061,8 +1463,8 @@
         <h4 style="margin: 0 0 10px; color: #5c3d00; font-weight: 700;">
           <i class="fas fa-clock"></i> Order Timing
         </h4>
-        <p><i class="fas fa-sun"></i> Lunch Orders: 10:00 AM - 1:00 PM</p>
-        <p><i class="fas fa-moon"></i> Dinner Orders: 5:00 PM - 7:00 PM</p>
+        <p><i class="fas fa-sun"></i> Lunch Orders: 10:00 AM - 2:00 PM</p>
+        <p><i class="fas fa-moon"></i> Dinner Orders: 5:00 PM - 8:00 PM</p>
    <p style="margin: 5px 0; font-weight: 600; color: #5c3d00;">
          Kindly place your orders within these time slots to ensure timely delivery
         </p>
@@ -1078,7 +1480,7 @@
 <p style="margin-top: 15px; font-size: 1.1em; color: #5c3d00; font-weight: 600;">
         <i class="fas fa-calendar-alt" style="color: #f5b700;"></i>
         We share our daily lunch and dinner menu everyday on what's app!
-       To stay uddated add us on what's app and never miss out on what's cooking.
+       To stay updated add us on what's app and never miss out on what's cooking.
       </p>
       </form>
     </div>
@@ -1133,6 +1535,19 @@
         <div class="review-rating">★★★★★</div>
         <p class="review-text">We hired Amarjoti Eats for our office event and the catering was exceptional! The food was delicious, the setup was professional, and the tea and coffee service was a big hit. Will definitely use them again.</p>
       </div>
+
+        <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar">P</div>
+          <div>
+            <h4 class="review-name">Shahbaaz Singh</h4>
+            <div class="review-date">May 22, 2025</div>
+          </div>
+        </div>
+        <div class="review-rating">★★★★★</div>
+        <p class="review-text">"Kheer ho, sewaiyan ho ya sweet breads – Amarjoti Eats ke sabhi sweets fresh, soft aur delicious hote hain. True homemade taste with great quality. Highly recommended!"</p>
+      </div>
+
     </div>
   </section>
   <section id="contact" class="section">
@@ -1160,10 +1575,16 @@
     <p>
       <a href="#contact" style="color:#d84315; text-decoration:none;">Contact Us</a> |
       <a href="#plans" style="color:#d84315; text-decoration:none;">Tiffin Plans</a> |
+      <a href="#sweets" style="color:#d84315; text-decoration:none;">Sweets</a> |
       <a href="#reviews" style="color:#d84315; text-decoration:none;">Reviews</a>
     </p>
   </footer>
 
+  <div class="whatsapp-float">
+    <a href="https://wa.me/919646432566" target="_blank">
+      <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp">
+    </a>
+  </div>
 
   <script>
     // Set current year in footer
@@ -1211,16 +1632,25 @@
       window.open(url, '_blank');
     }
     
+    // Sweet dishes order function
+    function orderSweets() {
+      const message = `Hello! I would like to order your special sweet dishes from Amarjoti Eats. Please let me know about availability and ordering details.`;
+      const url = `https://wa.me/919646432566?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    }
+    
     // Smooth scrolling for navigation
     document.querySelectorAll('nav a').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const targetId = this.getAttribute('href');
         const targetElement = document.querySelector(targetId);
-        window.scrollTo({
-          top: targetElement.offsetTop - 80,
-          behavior: 'smooth'
-        });
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
       });
     });
   </script>
