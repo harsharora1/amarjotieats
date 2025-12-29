@@ -4,438 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amarjoti Eats - Homemade Tiffin Service</title>
-<link rel="stylesheet" href="style.css">
   <meta name="description" content="Amarjoti Eats offers fresh, homemade tiffin services with daily rotating menus. Enjoy hygienic North Indian meals delivered to your door in Moga, Punjab.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍱</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍱</text></svg>">
   <link rel="apple-touch-icon" href="https://i.postimg.cc/y6j1Mnss/logo-png.webp">
   <link rel="icon" type="image/webp" sizes="192x192" href="https://i.postimg.cc/y6j1Mnss/logo-png.webp">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
     body {
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none;    /* Firefox */
-  -ms-user-select: none;     /* IE/Edge */
-  user-select: none;         /* Standard */
-}
-
-/* FSSAI License Badge Styles - UPDATED with larger logo */
-.fssai-badge {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  background: linear-gradient(to right, #f8fff8, #ffffff);
-  border: 1.5px solid #28a745;
-  border-radius: 12px;
-  padding: 8px 20px;
-  margin: 10px auto;
-  max-width: 320px;
-  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.15);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.fssai-badge:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 18px rgba(40, 167, 69, 0.25);
-  background: linear-gradient(to right, #ffffff, #f8fff8);
-}
-
-.fssai-badge::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 5px;
-  height: 100%;
-  background: linear-gradient(to bottom, #28a745, #20c997);
-}
-
-.fssai-logo {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-  filter: brightness(0.85);
-  transition: transform 0.3s ease;
-}
-
-.fssai-badge:hover .fssai-logo {
-  transform: scale(1.1);
-}
-
-.fssai-text {
-  font-family: 'Nunito', sans-serif;
-  font-size: 0.95em;
-  color: #2e7d32;
-  font-weight: 700;
-  letter-spacing: 0.3px;
-}
-
-.fssai-number {
-  color: #d84315;
-  font-weight: 800;
-  margin-left: 3px;
-  font-size: 1.05em;
-}
-
-/* Mobile responsive adjustments for FSSAI badge */
-@media (max-width: 480px) {
-  .fssai-badge {
-    padding: 7px 16px;
-    max-width: 300px;
-    gap: 10px;
-  }
-  
-  .fssai-logo {
-    width: 30px;
-    height: 30px;
-  }
-  
-  .fssai-text {
-    font-size: 0.9em;
-  }
-  
-  .fssai-number {
-    font-size: 1em;
-  }
-}
-
-/* Special Sweet Dishes Section - UPDATED */
-.special-sweets-section {
-  background: linear-gradient(135deg, #fff5f5 0%, #ffeef0 100%);
-  border-radius: 20px;
-  padding: 30px 20px;
-  margin: 40px auto;
-  max-width: 900px;
-  text-align: center;
-  border: 3px solid #f5b700;
-  box-shadow: 0 10px 30px rgba(245, 183, 0, 0.25);
-  position: relative;
-  overflow: hidden;
-}
-
-.special-sweets-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 5px;
-  background: linear-gradient(90deg, #ff6b6b, #f5b700, #ff6b6b);
-}
-
-.sweet-dishes-header {
-  margin-bottom: 30px;
-  position: relative;
-}
-
-.sweet-dishes-header h3 {
-  color: #d84315;
-  font-size: 2.2em;
-  font-weight: 700;
-  margin: 0 0 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  font-family: 'Playfair Display', serif;
-}
-
-.sweet-dishes-header h3 i {
-  color: #ff6b6b;
-  font-size: 1.8em;
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
-}
-
-.sweet-dishes-subtitle {
-  color: #5c3d00;
-  font-size: 1.1em;
-  font-style: italic;
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-.sweets-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  margin-top: 20px;
-}
-
-.sweet-item {
-  background: white;
-  border-radius: 15px;
-  padding: 25px 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  transition: all 0.4s ease;
-  border: 2px solid #ffe082;
-  position: relative;
-  overflow: hidden;
-}
-
-.sweet-item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(255, 107, 107, 0.3);
-  border-color: #ff6b6b;
-}
-
-.sweet-icon {
-  font-size: 3em;
-  margin-bottom: 15px;
-  color: #ff6b6b;
-  display: block;
-  transition: transform 0.3s ease;
-}
-
-.sweet-item:hover .sweet-icon {
-  transform: rotate(10deg) scale(1.2);
-}
-
-.sweet-name {
-  font-size: 1.4em;
-  font-weight: 700;
-  color: #d84315;
-  margin-bottom: 10px;
-  font-family: 'Playfair Display', serif;
-}
-
-.sweet-description {
-  color: #5c3d00;
-  font-size: 0.95em;
-  line-height: 1.5;
-  margin-bottom: 15px;
-  padding: 0 10px;
-}
-
-.sweet-price {
-  background: linear-gradient(135deg, #f5b700, #ff6b6b);
-  color: white;
-  padding: 8px 20px;
-  border-radius: 25px;
-  font-weight: 700;
-  font-size: 1.2em;
-  display: inline-block;
-  box-shadow: 0 4px 10px rgba(245, 183, 0, 0.3);
-}
-
-/* Sweet Dish Images */
-.sweet-image {
-  width: 100%;
-  height: 180px;
-  border-radius: 10px;
-  object-fit: cover;
-  margin-bottom: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.sweet-item:hover .sweet-image {
-  transform: scale(1.05);
-}
-
-.sweets-cta {
-  margin-top: 40px;
-  padding: 15px 40px;
-  background: linear-gradient(135deg, #ff6b6b, #f5b700);
-  color: white;
-  border: none;
-  border-radius: 30px;
-  font-weight: 700;
-  font-size: 1.2em;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 6px 15px rgba(255, 107, 107, 0.4);
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.sweets-cta:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 25px rgba(255, 107, 107, 0.5);
-  background: linear-gradient(135deg, #f5b700, #ff6b6b);
-}
-
-.sweets-cta i {
-  font-size: 1.3em;
-}
-
-.sweets-notice {
-  margin-top: 25px;
-  color: #5c3d00;
-  font-size: 0.95em;
-  font-style: italic;
-  background: #fff9d1;
-  padding: 12px 20px;
-  border-radius: 10px;
-  border-left: 4px solid #f5b700;
-}
-
-/* Mobile optimization for sweets section */
-@media (max-width: 768px) {
-  .special-sweets-section {
-    margin: 30px 15px;
-    padding: 25px 15px;
-  }
-  
-  .sweet-dishes-header h3 {
-    font-size: 1.8em;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .sweets-container {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  
-  .sweet-item {
-    padding: 20px 15px;
-  }
-  
-  .sweet-image {
-    height: 150px;
-  }
-  
-  .sweets-cta {
-    padding: 12px 30px;
-    font-size: 1.1em;
-  }
-}
-
-/* Compact yet attractive add-ons styles - UPDATED */
-.add-ons-section {
-  background: linear-gradient(to bottom, #fffdf5, #fff9d1);
-  border-radius: 10px;
-  padding: 12px;
-  margin: 15px auto;
-  max-width: 460px;
-  text-align: center;
-  border: 1px solid #f5b700;
-  box-shadow: 0 3px 10px rgba(245, 183, 0, 0.2);
-  position: relative;
-  overflow: hidden;
-}
-
-.add-ons-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, #f5b700, #d84315, #f5b700);
-}
-
-.add-ons-title {
-  margin: 0 0 10px;
-  color: #5c3d00;
-  font-weight: 700;
-  font-size: 1em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-}
-
-.add-ons-title i {
-  color: #d84315;
-  font-size: 1.1em;
-}
-
-.add-ons-list {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 5px;
-  flex-wrap: wrap;
-}
-
-.add-on-item {
-  background: white;
-  border-radius: 8px;
-  padding: 10px 12px;
-  min-width: 100px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
-  border: 1px solid #f5b700;
-}
-
-.add-on-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(245, 183, 0, 0.3);
-}
-
-.add-on-icon {
-  font-size: 1.5em;
-  margin-bottom: 5px;
-  display: block;
-  color: #d84315;
-}
-
-.add-on-name {
-  font-weight: 600;
-  color: #5c3d00;
-  margin-bottom: 2px;
-  font-size: 0.95em;
-}
-
-.add-on-price {
-  color: #d84315;
-  font-weight: 700;
-  font-size: 0.95em;
-}
-
-.add-ons-section p {
-  margin-top: 10px;
-  font-size: 0.9em;
-  color: #5c3d00;
-  font-style: italic;
-}
-
-/* Mobile optimization */
-@media (max-width: 480px) {
-  .add-ons-section {
-    padding: 10px;
-    margin: 12px auto;
-    max-width: 90%;
-  }
-  
-  .add-ons-list {
-    gap: 8px;
-  }
-  
-  .add-on-item {
-    padding: 8px 10px;
-    min-width: 90px;
-  }
-  
-  .add-on-icon {
-    font-size: 1.3em;
-  }
-  
-  .add-on-name {
-    font-size: 0.9em;
-  }
-  
-  .add-on-price {
-    font-size: 0.9em;
-  }
-}
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
       font-family: 'Nunito', sans-serif;
       margin: 0;
       padding: 0;
@@ -443,54 +23,54 @@
       color: #333;
     }
 
+    * {
+      box-sizing: border-box;
+    }
+
+    /* HEADER & NAVIGATION */
     header {
       background: linear-gradient(90deg, #fff7d5, #ffe082);
-      padding: 20px 20px;
+      padding: 15px 20px;
       text-align: center;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .brand-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.6em;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  color: #5c3d00;
-  margin: 0;
-  position: relative;
-  display: inline-block;
-  text-shadow: 
-    1px 1px 0 #fff,
-    2px 2px 6px rgba(0, 0, 0, 0.15);
-  transition: all 0.4s ease;
-}
+      font-family: 'Playfair Display', serif;
+      font-size: 2em;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #5c3d00;
+      margin: 0;
+      position: relative;
+      display: inline-block;
+      text-shadow: 1px 1px 0 #fff, 2px 2px 6px rgba(0, 0, 0, 0.15);
+      transition: all 0.4s ease;
+    }
 
-/* Highlight "Eats" */
-.brand-name span {
-  color: #d84315;
-  font-weight: 800;
-  position: relative;
-}
+    .brand-name span {
+      color: #d84315;
+      font-weight: 800;
+      position: relative;
+    }
 
-/* Remove underline: delete ::after block */
-
-/* Hover effect */
-.brand-name:hover {
-  transform: scale(1.05);
-  letter-spacing: 2px;
-}
+    .brand-name:hover {
+      transform: scale(1.03);
+      letter-spacing: 1.2px;
+    }
 
     header .tagline {
-      margin-top: 10px;
+      margin-top: 8px;
       font-family: 'Nunito', sans-serif;
-      font-size: 1.2em;
+      font-size: 1em;
       color: #6d4c41;
       font-weight: 600;
     }
+
     header .divider {
-      margin: 20px auto 0;
-      width: 60px;
-      height: 4px;
+      margin: 15px auto 0;
+      width: 50px;
+      height: 3px;
       background-color: #f5b700;
       border-radius: 2px;
     }
@@ -500,18 +80,20 @@
       flex-wrap: wrap;
       justify-content: center;
       background-color: #f5b700;
-      padding: 10px 0;
+      padding: 8px 0;
     }
 
     nav a {
-      margin: 7px;
+      margin: 5px;
       text-decoration: none;
       color: #000;
       font-weight: bold;
       position: relative;
-      padding-bottom: 4px;
+      padding-bottom: 3px;
       border-bottom: 2px solid black;
-      transition: color 0.3s ease, border-color 0.3s ease, text-shadow 0.3s ease;
+      transition: color 0.3s ease, border-color 0.3s ease;
+      font-size: 0.9em;
+      padding: 5px 10px;
     }
 
     nav a:hover {
@@ -519,6 +101,105 @@
       border-color: #f5b700;
       text-shadow: 1px 1px 4px black;
     }
+
+    /* FSSAI BADGE */
+    .fssai-badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: linear-gradient(to right, #f8fff8, #ffffff);
+      border: 1.5px solid #28a745;
+      border-radius: 12px;
+      padding: 8px 20px;
+      margin: 10px auto;
+      max-width: 320px;
+      box-shadow: 0 4px 12px rgba(40, 167, 69, 0.15);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .fssai-badge:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba(40, 167, 69, 0.25);
+      background: linear-gradient(to right, #ffffff, #f8fff8);
+    }
+
+    .fssai-badge::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background: linear-gradient(to bottom, #28a745, #20c997);
+    }
+
+    .fssai-logo {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+      filter: brightness(0.85);
+      transition: transform 0.3s ease;
+    }
+
+    .fssai-badge:hover .fssai-logo {
+      transform: scale(1.1);
+    }
+
+    .fssai-text {
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.95em;
+      color: #2e7d32;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+
+    .fssai-number {
+      color: #d84315;
+      font-weight: 800;
+      margin-left: 3px;
+      font-size: 1.05em;
+    }
+
+    /* MADE IN MOGA BADGE */
+    .made-in-moga {
+      display: inline-block;
+      background: linear-gradient(135deg, #f5b700 0%, #d84315 100%);
+      color: white;
+      padding: 6px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      font-size: 1em;
+      margin: 5px auto 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.35s ease;
+      border: 2px solid #fff;
+      cursor: pointer;
+    }
+
+    .made-in-moga:hover {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 10px 25px rgba(216, 67, 21, 0.5);
+      background: linear-gradient(135deg, #d84315 0%, #f5b700 100%);
+    }
+
+    @keyframes locationBounce {
+      0% { transform: translateY(0); }
+      30% { transform: translateY(-5px); }
+      60% { transform: translateY(2px); }
+      100% { transform: translateY(0); }
+    }
+
+    .made-in-moga:hover i {
+      animation: locationBounce 0.6s ease;
+    }
+
+    /* BANNERS */
     .july-banner {
       display: flex;
       align-items: center;
@@ -526,11 +207,11 @@
       gap: 12px;
       background: linear-gradient(135deg, #f5b700 0%, #d84315 100%);
       color: white;
-      padding: 14px 20px;
+      padding: 12px 15px;
       border-radius: 8px;
       font-weight: 700;
-      font-size: 1.2em;
-      margin: 20px auto;
+      font-size: 1em;
+      margin: 15px auto;
       max-width: 95%;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
       text-align: center;
@@ -538,60 +219,46 @@
       overflow: hidden;
       border: 2px solid rgba(255,255,255,0.5);
     }
-    
+
     .july-banner i {
-      font-size: 1.4em;
-      min-width: 30px;
+      font-size: 1.2em;
+      min-width: 25px;
       text-align: center;
     }
-    
+
     .july-banner .date-highlight {
       background: white;
       color: #d84315;
-      padding: 5px 12px;
+      padding: 4px 10px;
       border-radius: 20px;
       font-weight: 800;
       margin: 0 5px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      font-size: 0.9em;
     }
-    
-    .july-banner-content {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    
-    .july-banner-content span {
-      display: block;
-      line-height: 1.4;
-    }
+
     .free-delivery-banner {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 12px;
+      gap: 10px;
       background: #ffe082;
       color: #FF0000;
       font-weight: 700;
-      font-size: 1.1em;
-      padding: 12px 20px;
+      font-size: 0.95em;
+      padding: 10px 15px;
       border-radius: 10px;
-      margin: 15px auto 30px;
-      max-width: 350px;
+      margin: 10px auto 20px;
+      max-width: 320px;
       box-shadow: 0 4px 8px rgba(216, 67, 21, 0.3);
     }
-    
-    .free-delivery-banner:hover {
-      transform: scale(1.0);
-      box-shadow: 0 12px 24px rgba(245, 183, 0, 0.6);
-      background-color: #fff4b3;
-    }
-    
+
     .free-delivery-banner img {
-      width: 32px;
-      height: 32px;
+      width: 28px;
+      height: 28px;
     }
- /* Updated logo container with tagline */
+
+    /* LOGO & TAGLINE */
     .logo-container {
       text-align: center;
       padding: 10px 0;
@@ -600,122 +267,96 @@
       flex-direction: column;
       align-items: center;
     }
-    
+
     .logo-container img {
-      max-width: 300px;
-      height: 200px;
+      max-width: 250px;
+      height: 180px;
       border-radius: 100%;
       transition: transform 0.3s ease;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
-    
+
     .logo-container img:hover {
       transform: scale(1.05);
     }
-    
+
     .hindi-tagline {
       font-family: 'Nunito', sans-serif;
-      font-size: 1.5em;
+      font-size: 1.2em;
       font-weight: 700;
       color: #5c3d00;
       text-align: center;
       max-width: 800px;
       margin: 10px;
       line-height: 1.4;
-      padding: 15px 20px;
+      padding: 12px 15px;
       background: linear-gradient(to right, #fff7d5, #ffe082);
-      border-radius: 12px;
+      border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       position: relative;
     }
-    
+
     .hindi-tagline::before,
     .hindi-tagline::after {
       content: '"';
       position: absolute;
-      font-size: 3rem;
+      font-size: 2.5rem;
       color: rgba(245, 183, 0, 0.3);
       font-family: serif;
       line-height: 1;
     }
-    
+
     .hindi-tagline::before {
       top: 5px;
       left: 10px;
     }
-    
+
     .hindi-tagline::after {
       bottom: -20px;
       right: 10px;
       transform: rotate(180deg);
     }
-   .made-in-moga {
-  display: inline-block;
-  background: linear-gradient(135deg, #f5b700 0%, #d84315 100%);
-  color: white;
-  padding: 8px 25px;
-  border-radius: 30px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  font-size: 1.1em;
-  margin: 5px auto 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  position: relative;
-  overflow: hidden;
-  transition: all 0.35s ease;
-  border: 2px solid #fff;
-  cursor: pointer;
-}
 
-/* 🔥 Hover Effect */
-.made-in-moga:hover {
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 10px 25px rgba(216, 67, 21, 0.5);
-  background: linear-gradient(135deg, #d84315 0%, #f5b700 100%);
-}
-
-/* Icon animation on hover */
-.made-in-moga:hover i {
-  animation: locationBounce 0.6s ease;
-}
-
-/* Icon bounce keyframes */
-@keyframes locationBounce {
-  0%   { transform: translateY(0); }
-  30%  { transform: translateY(-5px); }
-  60%  { transform: translateY(2px); }
-  100% { transform: translateY(0); }
-}
-
-
-    /* Adjust hero section to accommodate new tagline */
-    .hero-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      z-index: 2;
-    }
-    
-    .hero h2 {
-      margin-top: 0; /* Remove previous margin */
-    }
-    
+    /* HERO SECTION */
     .hero {
       background-image: url("https://images.unsplash.com/photo-1606788075761-962da3edcc6b");
       background-size: cover;
       background-position: center;
-      height: 30vh;
+      height: 25vh;
       display: flex;
       align-items: center;
       justify-content: center;
       color: white;
       text-shadow: 2px 2px 4px #000;
       text-align: center;
-      padding: 20px;
+      padding: 15px;
       position: relative;
     }
-    
+
+    .hero h2 {
+      font-size: 1.8em;
+      z-index: 2;
+      position: relative;
+      margin: 0;
+    }
+
+    .hero h2:hover {
+      transform: scale(1.05);
+    }
+
+    .hero-image-section {
+      max-width: 900px;
+      margin: 10px auto 0;
+      padding: 0 15px;
+      text-align: center;
+    }
+
     .hero-image-section img {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      object-fit: cover;
       transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.3s ease;
     }
 
@@ -725,45 +366,10 @@
       filter: brightness(1.05);
     }
 
-    .hero h2 {
-      font-size: 2em;
-      z-index: 2;
-      position: relative;
-    }
-.hero h2:hover {
- transform: scale(1.10);
-    }
-
-    .hero-image-section {
-      max-width: 900px;
-      margin: 10px auto 0;
-      padding: 0 20px;
-      text-align: center;
-    }
-
-    .hero-image-section img {
-      width: 100%;
-      max-width: 700px;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      object-fit: cover;
-    }
-
+    /* SECTIONS */
     .section {
-      padding: 30px 20px;
+      padding: 25px 15px;
       text-align: center;
-    }
-
-    .section h3:hover,
-    .form-container h3:hover {
-      color: black;
-      transition: color 0.3s ease;
-    }
-
-    .section h3:hover::after,
-    .form-container h3:hover::after {
-      background-color: black;
-      transition: background-color 0.3s ease;
     }
 
     .section h3,
@@ -774,6 +380,8 @@
       color: #f5b700;
       text-shadow: none;
       transition: color 0.3s ease;
+      font-size: 1.5em;
+      margin-top: 0;
     }
 
     .section h3::after,
@@ -789,163 +397,353 @@
       border-radius: 2px;
       transition: background-color 0.3s ease;
     }
-    
-    #about p {
-      font-size: 1.2em;
-      line-height: 1.5;
+
+    .section h3:hover,
+    .form-container h3:hover {
+      color: black;
     }
-    
+
+    .section h3:hover::after,
+    .form-container h3:hover::after {
+      background-color: black;
+    }
+
+    #about p {
+      font-size: 1.1em;
+      line-height: 1.5;
+      padding: 0 10px;
+    }
+
+    /* TIFFIN PLANS */
     .tiffin-plans {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
-      margin-top: 2px;
+      gap: 15px;
+      margin-top: 20px;
     }
 
     .plan {
       border: 2px solid #ffce00;
       border-radius: 10px;
-      padding: 20px;
-      width: 90%;
+      padding: 18px;
+      width: 95%;
       max-width: 320px;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    }
+
+    .plan:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      z-index: 2;
     }
 
     .plan h4 {
       margin-top: 0;
       color: #000;
+      font-size: 1.2em;
     }
 
     .plan p {
-      margin: 10px 0;
-    }
-    
-    .plan {
-      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+      margin: 8px 0;
+      font-size: 0.95em;
     }
 
-    .plan:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      z-index: 2;
-    }
-
-    .cta {
-      margin-top: 30px;
-      font-size: 1.1em;
-    }
-
-    /* UPDATED: Centered Sunday closed note */
-    .note {
-      color: #FF0000;
-      font-size: 1.1em;
-      font-weight: bold;
-      margin-top: 30px;
+    /* ADD-ONS SECTION - FIXED FOR MOBILE */
+    .add-ons-section {
+      background: linear-gradient(to bottom, #fffdf5, #fff9d1);
+      border-radius: 10px;
+      padding: 12px;
+      margin: 15px auto;
+      max-width: 95%;
       text-align: center;
-      padding: 0 20px;
+      border: 1px solid #f5b700;
+      box-shadow: 0 3px 10px rgba(245, 183, 0, 0.2);
+      position: relative;
+      overflow: hidden;
     }
-.timing-info {
+
+    .add-ons-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, #f5b700, #d84315, #f5b700);
+    }
+
+    .add-ons-title {
+      margin: 0 0 8px;
+      color: #5c3d00;
+      font-weight: 700;
+      font-size: 0.95em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .add-ons-list {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 5px;
+      flex-wrap: wrap;
+    }
+
+    .add-on-item {
+      background: white;
+      border-radius: 8px;
+      padding: 8px 10px;
+      min-width: 90px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      border: 1px solid #f5b700;
+    }
+
+    .add-on-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(245, 183, 0, 0.3);
+    }
+
+    .add-on-icon {
+      font-size: 1.3em;
+      margin-bottom: 3px;
+      display: block;
+      color: #d84315;
+    }
+
+    .add-on-name {
+      font-weight: 600;
+      color: #5c3d00;
+      margin-bottom: 2px;
+      font-size: 0.9em;
+    }
+
+    .add-on-price {
+      color: #d84315;
+      font-weight: 700;
+      font-size: 0.9em;
+    }
+
+    /* SWEETS SECTION */
+    .special-sweets-section {
+      background: linear-gradient(135deg, #fff5f5 0%, #ffeef0 100%);
+      border-radius: 15px;
+      padding: 25px 15px;
+      margin: 30px auto;
+      max-width: 95%;
+      text-align: center;
+      border: 2px solid #f5b700;
+      box-shadow: 0 10px 30px rgba(245, 183, 0, 0.25);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .special-sweets-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #ff6b6b, #f5b700, #ff6b6b);
+    }
+
+    .sweet-dishes-header h3 {
+      color: #d84315;
+      font-size: 1.6em;
+      font-weight: 700;
+      margin: 0 0 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: 'Playfair Display', serif;
+      flex-wrap: wrap;
+    }
+
+    .sweet-dishes-subtitle {
+      color: #5c3d00;
+      font-size: 0.95em;
+      font-style: italic;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.5;
+      padding: 0 10px;
+    }
+
+    .sweets-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .sweet-item {
+      background: white;
+      border-radius: 12px;
+      padding: 20px 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.4s ease;
+      border: 2px solid #ffe082;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sweet-image {
+      width: 100%;
+      height: 150px;
+      border-radius: 8px;
+      object-fit: cover;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .sweet-name {
+      font-size: 1.2em;
+      font-weight: 700;
+      color: #d84315;
+      margin-bottom: 8px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .sweet-description {
+      color: #5c3d00;
+      font-size: 0.9em;
+      line-height: 1.4;
+      margin-bottom: 12px;
+      padding: 0 5px;
+    }
+
+    .sweet-price {
+      background: linear-gradient(135deg, #f5b700, #ff6b6b);
+      color: white;
+      padding: 6px 15px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 1em;
+      display: inline-block;
+      box-shadow: 0 4px 10px rgba(245, 183, 0, 0.3);
+    }
+
+    .sweets-cta {
+      margin-top: 25px;
+      padding: 12px 25px;
+      background: linear-gradient(135deg, #ff6b6b, #f5b700);
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-weight: 700;
+      font-size: 1em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 15px rgba(255, 107, 107, 0.4);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sweets-notice {
+      margin-top: 20px;
+      color: #5c3d00;
+      font-size: 0.85em;
+      font-style: italic;
+      background: #fff9d1;
+      padding: 10px 15px;
+      border-radius: 8px;
+      border-left: 4px solid #f5b700;
+    }
+
+    /* CATERING INFO - FIXED FOR MOBILE */
+    .catering-info {
+      background-color: #fff9d1;
+      border: 2px solid #f5b700;
+      border-radius: 12px;
+      max-width: 95%;
+      margin: 30px auto 0;
+      padding: 20px 15px;
+      font-size: 1em;
+      color: #5c3d00;
+      box-shadow: 0 6px 15px rgba(245, 183, 0, 0.4);
+      font-weight: 600;
+      line-height: 1.5;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .catering-info:hover {
+      transform: scale(1.02);
+    }
+
+    .catering-info p {
+      margin: 12px 0;
+      text-align: center;
+    }
+
+    /* TIMING INFO - FIXED FOR MOBILE */
+    .timing-info {
       background: #fff9e6;
       border: 2px solid #f5b700;
       border-radius: 10px;
-      padding: 20px;
-      margin-top: 20px;
+      padding: 15px;
+      margin: 15px auto;
       text-align: center;
-      max-width: 500px;
+      max-width: 95%;
       box-shadow: 0 4px 8px rgba(245, 183, 0, 0.2);
       position: relative;
       overflow: hidden;
     }
-    
+
     .timing-info::before {
       content: "";
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      height: 5px;
+      height: 4px;
       background: linear-gradient(90deg, #25d366, #f5b700);
     }
-    
+
     .timing-info h4 {
-      margin: 0 0 15px;
+      margin: 0 0 10px;
       color: #5c3d00;
       font-weight: 700;
-      font-size: 1.3em;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-    }
-    
-    .timing-info p {
-      margin: 10px 0;
-      font-weight: 600;
-      color: #5c3d00;
       font-size: 1.1em;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
     }
-    .catering-info {
-      background-color: #fff9d1;
-      border: 2px solid #f5b700;
-      border-radius: 12px;
-      max-width: 700px;
-      margin: 40px auto 0;
-      padding: 25px 20px;
-      font-size: 1.15em;
-      color: #5c3d00;
-      box-shadow: 0 6px 15px rgba(245, 183, 0, 0.4);
+
+    .timing-info p {
+      margin: 8px 0;
       font-weight: 600;
-      line-height: 1.5;
-    }
-    
-    .catering-info {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .catering-info:hover {
-      transform: scale(1.03);
+      color: #5c3d00;
+      font-size: 0.95em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      flex-wrap: wrap;
     }
 
-
-    footer {
-      background-color: #f5b700;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-
-    footer p {
-      margin: 0;
-      color: #000;
-    }
-
-    .special-offer ul {
-      list-style: none;
-      padding-left: 0;
-      text-align: left;
-    }
-
-    .special-offer ul li::before {
-      content: '✔️';
-      margin-right: 8px;
-    }
-
+    /* QUICK ENQUIRY FORM - FIXED FOR MOBILE */
     .form-container {
-      margin-top: 30px;
+      margin-top: 25px;
       text-align: center;
+      padding: 0 15px;
+      max-width: 100%;
     }
 
     form {
-      max-width: 400px;
+      max-width: 100%;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: 12px;
     }
 
     input[type="text"],
@@ -954,6 +752,7 @@
       border: 2px solid #f5b700;
       border-radius: 8px;
       font-size: 1em;
+      width: 100%;
     }
 
     button {
@@ -965,30 +764,155 @@
       font-size: 1em;
       cursor: pointer;
       transition: background 0.3s ease;
+      width: 100%;
+      font-weight: 600;
     }
 
     button:hover {
       background-color: #1ebd5b;
     }
 
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25d366;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
+    .form-container p {
+      margin-top: 15px;
+      font-size: 0.95em;
+      color: #5c3d00;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    /* CALL BUTTON */
+    .call-now-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+      padding: 0 15px;
+    }
+
+    .call-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #25d366;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+      text-decoration: none;
+      gap: 8px;
+      font-size: 1em;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .call-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      background: #1ebd5b;
+    }
+
+    .note {
+      color: #FF0000;
+      font-size: 1em;
+      font-weight: bold;
+      margin-top: 25px;
       text-align: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      z-index: 1000;
+      padding: 0 15px;
     }
 
-    .whatsapp-float img {
-      width: 35px;
-      margin-top: 12px;
+    /* REVIEWS SECTION */
+    #reviews {
+      background: linear-gradient(to bottom, #fff9d1, #fffdf5);
+      padding: 30px 15px;
     }
 
+    .reviews-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 15px 0;
+    }
+
+    .review-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: left;
+      position: relative;
+      border-top: 4px solid #f5b700;
+    }
+
+    .review-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .review-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .review-avatar {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: #f5b700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.3rem;
+      color: #5c3d00;
+      margin-right: 12px;
+    }
+
+    .review-name {
+      font-weight: 700;
+      margin: 0;
+      font-size: 1.1em;
+    }
+
+    .review-date {
+      font-size: 0.8rem;
+      color: #777;
+      margin-top: 2px;
+    }
+
+    .review-rating {
+      color: #f5b700;
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .review-text {
+      font-style: italic;
+      line-height: 1.5;
+      color: #444;
+      position: relative;
+      padding-left: 15px;
+      font-size: 0.95em;
+    }
+
+    .review-text::before {
+      content: "\"";
+      position: absolute;
+      left: -5px;
+      top: -15px;
+      font-size: 2.5rem;
+      color: rgba(245, 183, 0, 0.2);
+      font-family: serif;
+    }
+
+    /* CONTACT SECTION */
     #contact .contact-info {
       display: flex;
       flex-direction: column;
@@ -1004,7 +928,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      font-size: 1.1em;
+      font-size: 1em;
       justify-content: center;
       width: 100%;
       text-align: center;
@@ -1015,16 +939,9 @@
     }
 
     #contact .icon {
-      font-size: 1.4em;
-      width: 30px;
+      font-size: 1.2em;
+      width: 25px;
       text-align: center;
-    }
-
-    .meal-notice {
-      text-decoration: underline;
-      color: #5c3d00;
-      font-weight: 600;
-      margin: 15px 0;
     }
 
     .phone-link {
@@ -1040,96 +957,7 @@
       color: black;
       text-decoration: underline;
     }
-    
-    /* Reviews Section */
-    #reviews {
-      background: linear-gradient(to bottom, #fff9d1, #fffdf5);
-      padding: 50px 20px;
-    }
-    
-    .reviews-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
-      padding: 20px;
-    }
-    
-    .review-card {
-      background: white;
-      border-radius: 12px;
-      padding: 25px;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      text-align: left;
-      position: relative;
-      border-top: 4px solid #f5b700;
-    }
-    
-    .review-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-    }
-    
-    .review-header {
-      display: flex;
-      align-items: center;
-      margin-bottom: 15px;
-    }
-    
-    .review-avatar {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: #f5b700;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 1.5rem;
-      color: #5c3d00;
-      margin-right: 15px;
-    }
-    
-    .review-name {
-      font-weight: 700;
-      margin: 0;
-    }
-    
-    .review-date {
-      font-size: 0.85rem;
-      color: #777;
-      margin-top: 3px;
-    }
-    
-    .review-rating {
-      color: #f5b700;
-      font-size: 1.1rem;
-      margin-bottom: 10px;
-    }
-    
-    .review-text {
-      font-style: italic;
-      line-height: 1.5;
-      color: #444;
-      position: relative;
-      padding-left: 20px;
-    }
-    
-    .review-text::before {
-      content: """;
-      position: absolute;
-      left: -5px;
-      top: -15px;
-      font-size: 3rem;
-      color: rgba(245, 183, 0, 0.2);
-      font-family: serif;
-    }
-    
- 
 
-    /* Phone number tooltip */
     .phone-tooltip {
       position: absolute;
       bottom: 100%;
@@ -1137,9 +965,9 @@
       transform: translateX(-50%);
       background: #333;
       color: white;
-      padding: 8px 12px;
+      padding: 6px 10px;
       border-radius: 4px;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       white-space: nowrap;
       opacity: 0;
       visibility: hidden;
@@ -1147,178 +975,260 @@
       z-index: 100;
       box-shadow: 0 2px 10px rgba(0,0,0,0.2);
     }
-    
+
     .phone-tooltip::after {
       content: '';
       position: absolute;
       top: 100%;
       left: 50%;
       transform: translateX(-50%);
-      border: 6px solid transparent;
+      border: 5px solid transparent;
       border-top-color: #333;
     }
-    
+
     .phone-link:hover .phone-tooltip {
       opacity: 1;
       visibility: visible;
     }
-    
-    /* Call button - UPDATED */
-    .call-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: #25d366;
-      color: white;
-      padding: 12px 25px;
-      border-radius: 30px;
-      font-weight: bold;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: all 0.3s ease;
-      text-decoration: none;
-      gap: 10px;
-      font-size: 1.1em;
-      border: none;
-      cursor: pointer;
-    }
-    
-    .call-button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-      background: #1ebd5b;
-    }
-    
-    .call-button i {
-      font-size: 1.3em;
-    }
-    
-    /* Mobile detection message */
-    .mobile-call-notice {
-      background: #e3f2fd;
-      border-left: 4px solid #2196f3;
-      padding: 10px 15px;
-      border-radius: 4px;
-      margin: 15px auto;
-      max-width: 500px;
+
+    /* FOOTER */
+    footer {
+      background-color: #f5b700;
       text-align: center;
-      display: none;
-    }
-    
-    .mobile-call-notice.visible {
-      display: block;
-    }
-    
-    /* Call now container */
-    .call-now-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 20px;
+      padding: 20px 15px;
+      margin-top: 40px;
+      border-top: 1px solid #f5b700;
     }
 
+    footer p {
+      margin: 0;
+      color: #000;
+      font-size: 0.9em;
+    }
+
+    footer a {
+      color: #d84315;
+      text-decoration: none;
+      font-size: 0.9em;
+      margin: 0 5px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* WHATSAPP FLOAT */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+    }
+
+    .whatsapp-float img {
+      width: 30px;
+      margin-top: 12px;
+    }
+
+    /* MEDIA QUERIES */
     @media (min-width: 600px) {
-      .hero h2 {
-        font-size: 3em;
+      .brand-name {
+        font-size: 2.2em;
       }
-
+      
+      header .tagline {
+        font-size: 1.1em;
+      }
+      
+      .hero h2 {
+        font-size: 2.2em;
+      }
+      
       .tiffin-plans {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
       }
+      
+      .plan {
+        width: 45%;
+      }
+      
+      .sweets-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .reviews-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .add-ons-section {
+        max-width: 460px;
+      }
+      
+      .catering-info {
+        max-width: 700px;
+        padding: 25px 30px;
+      }
+      
+      .timing-info {
+        max-width: 500px;
+      }
+      
+      form {
+        max-width: 400px;
+      }
+      
+      .call-button {
+        width: auto;
+      }
     }
-    
-    @media (max-width: 768px) {
-      .gallery-container {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      }
-      
-      .gallery-item {
-        height: 200px;
-      }
-    }
-    
-    @media (max-width: 480px) {
-      .gallery-container {
-        grid-template-columns: 1fr;
-      }
-      
-      .review-card {
-        padding: 20px;
-      }
-      
-      .phone-tooltip {
-        display: none;
-      }
 
+    @media (min-width: 768px) {
+      .section {
+        padding: 30px 20px;
+      }
+      
+      .brand-name {
+        font-size: 2.4em;
+      }
+      
+      .hero h2 {
+        font-size: 2.5em;
+      }
+      
+      .sweets-container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      
+      .reviews-container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .brand-name {
+        font-size: 1.8em;
+      }
+      
+      header .tagline {
+        font-size: 0.95em;
+      }
+      
+      .hindi-tagline {
+        font-size: 1.1em;
+        padding: 10px 12px;
+      }
+      
+      .hero h2 {
+        font-size: 1.6em;
+      }
+      
+      .section h3,
+      .form-container h3 {
+        font-size: 1.3em;
+      }
+      
+      .plan h4 {
+        font-size: 1.1em;
+      }
+      
+      .sweet-dishes-header h3 {
+        font-size: 1.4em;
+      }
+      
+      .call-button {
+        font-size: 0.95em;
+        padding: 10px 15px;
+      }
+      
+      .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
+      }
+      
+      .whatsapp-float img {
+        width: 28px;
+        margin-top: 11px;
+      }
+    }
   </style>
 </head>
 <body>
 <header>
   <h1 class="brand-name">
-  Amarjoti <span>Eats</span>
-</h1>
-
+    Amarjoti <span>Eats</span>
+  </h1>
   <p class="tagline">Homemade Tiffins & Sweets Full Of Love</p>
   <div class="divider"></div>
 </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#plans">Plans</a>
-    <a href="#sweets">Sweets</a>
-    <a href="#reviews">Reviews</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  
-  <!-- FSSAI License Badge -->
-  <div class="fssai-badge">
-    <img src="https://freepnglogo.com/images/all_img/1707841493fssai-logo-png.png" alt="FSSAI Logo" class="fssai-logo">
-    <span class="fssai-text">License No: <span class="fssai-number">12345678901234</span></span>
-  </div>
-  
-  <!-- Made in Moga Badge -->
-  <div style="text-align: center;">
-    <div class="made-in-moga">
-      <i class="fas fa-map-marker-alt"></i> Made in Moga
-    </div>
-  </div>
-  
-   <div class="july-banner">
-    <div class="july-banner-content">
-      <span><span class="date-highlight">Order Now🤩</span>
-    </div>
-  </div>
-  <div class="free-delivery-banner">
-    <img src="https://img.icons8.com/ios-filled/50/fa314a/delivery.png" alt="Free Delivery">
-    Free Delivery on All Tiffin Plans!
-  </div>
- <div class="logo-container">
-    <img src="https://i.postimg.cc/y6j1Mnss/logo-png.webp" alt="Amarjoti Eats Logo">
-    <div class="hindi-tagline">
-      हर डिब्बा सिर्फ़ खाना नहीं लाता, वो माँ की रसोई की ख़ुशबू, अपनापन और सुकून भी साथ लाता है — यही है Amarjoti Eats की पहचान
-    </div>
-  </div>
-  <div class="hero">
-    <h2>Healthy. Hygienic. Homemade.</h2>
-  </div>
+<nav>
+  <a href="#about">About</a>
+  <a href="#plans">Plans</a>
+  <a href="#sweets">Sweets</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-  <div class="hero-image-section">
-    <img src="https://i.postimg.cc/c4Wtggwp/delicious-food-table-23-2150857814.avif" alt="Delicious Homemade Indian Food">
+<!-- FSSAI License Badge -->
+<div class="fssai-badge">
+  <img src="https://freepnglogo.com/images/all_img/1707841493fssai-logo-png.png" alt="FSSAI Logo" class="fssai-logo">
+  <span class="fssai-text">License No: <span class="fssai-number">12345678901234</span></span>
+</div>
+
+<!-- Made in Moga Badge -->
+<div style="text-align: center;">
+  <div class="made-in-moga">
+    <i class="fas fa-map-marker-alt"></i> Made in Moga
   </div>
+</div>
 
-  <section id="about" class="section">
-    <h3>Why Choose Amarjoti Eats?</h3>
-    <p>
-      "We offer fresh, home-cooked meals and homemade sweets prepared with love and care—perfect for working professionals, students, and elders who miss the taste of home."
-    </p>
-  </section>
+<div class="july-banner">
+  <div class="july-banner-content">
+    <span><span class="date-highlight">Order Now🤩</span></span>
+  </div>
+</div>
 
- <section id="plans" class="section">
+<div class="free-delivery-banner">
+  <img src="https://img.icons8.com/ios-filled/50/fa314a/delivery.png" alt="Free Delivery">
+  Free Delivery on All Tiffin Plans!
+</div>
+
+<div class="logo-container">
+  <img src="https://i.postimg.cc/y6j1Mnss/logo-png.webp" alt="Amarjoti Eats Logo">
+  <div class="hindi-tagline">
+    हर डिब्बा सिर्फ़ खाना नहीं लाता, वो माँ की रसोई की ख़ुशबू, अपनापन और सुकून भी साथ लाता है — यही है Amarjoti Eats की पहचान
+  </div>
+</div>
+
+<div class="hero">
+  <h2>Healthy. Hygienic. Homemade.</h2>
+</div>
+
+<div class="hero-image-section">
+  <img src="https://i.postimg.cc/c4Wtggwp/delicious-food-table-23-2150857814.avif" alt="Delicious Homemade Indian Food">
+</div>
+
+<section id="about" class="section">
+  <h3>Why Choose Amarjoti Eats?</h3>
+  <p>
+    "We offer fresh, home-cooked meals and homemade sweets prepared with love and care—perfect for working professionals, students, and elders who miss the taste of home."
+  </p>
+</section>
+
+<section id="plans" class="section">
   <h3>Our Tiffin Plans</h3>
 
   <div class="tiffin-plans">
-
     <div class="plan">
       <h4>Mini Veg Plan</h4>
       <p><strong>₹60</strong></p>
@@ -1346,92 +1256,89 @@
       <p>2 Sabzis + 4 Roti + Rice + Salad - Achar + Sweet (Small)</p>
       <p>Lunch or Dinner</p>
     </div>
-
   </div>
 </section>
 
- <div class="add-ons-section">
-      <h4 class="add-ons-title">
-        <i class="fas fa-plus-circle"></i> Customize your meal
-      </h4>
-      <h4 class="add-ons-title">
-         Meal add-ons
-      </h4>
-      <div class="add-ons-list">
-        <div class="add-on-item">
-          <i class="fas fa-blender add-on-icon"></i>
-          <div class="add-on-name">Fresh Curd </div>
-          <div class="add-on-price">₹10</div>
-        </div>
-        <div class="add-on-item">
-          <i class="fas fa-cookie add-on-icon"></i>
-          <div class="add-on-name">Crispy Papad</div>
-          <div class="add-on-price">₹5</div>
-        </div>
-        <div class="add-on-item">
-          <i class="fas fa-wine-bottle add-on-icon"></i>
-          <div class="add-on-name">Water Bottle</div>
-          <div class="add-on-price">₹20</div>
-        </div>
-        <!-- NEW: Extra Roti Add-on -->
-        <div class="add-on-item">
-          <i class="fas fa-bread-slice add-on-icon"></i>
-          <div class="add-on-name">Extra Roti</div>
-          <div class="add-on-price">₹5</div>
-        </div>
+<div class="add-ons-section">
+  <h4 class="add-ons-title">
+    <i class="fas fa-plus-circle"></i> Customize your meal
+  </h4>
+  <h4 class="add-ons-title">
+    Meal add-ons
+  </h4>
+  <div class="add-ons-list">
+    <div class="add-on-item">
+      <i class="fas fa-blender add-on-icon"></i>
+      <div class="add-on-name">Fresh Curd</div>
+      <div class="add-on-price">₹10</div>
+    </div>
+    <div class="add-on-item">
+      <i class="fas fa-cookie add-on-icon"></i>
+      <div class="add-on-name">Crispy Papad</div>
+      <div class="add-on-price">₹5</div>
+    </div>
+    <div class="add-on-item">
+      <i class="fas fa-wine-bottle add-on-icon"></i>
+      <div class="add-on-name">Water Bottle</div>
+      <div class="add-on-price">₹20</div>
+    </div>
+    <div class="add-on-item">
+      <i class="fas fa-bread-slice add-on-icon"></i>
+      <div class="add-on-name">Extra Roti</div>
+      <div class="add-on-price">₹5</div>
+    </div>
   </div>
-      <p>Add these to any meal!</p>
-    </div>
-  </section>
+  <p>Add these to any meal!</p>
+</div>
 
-  <!-- NEW: Special Sweet Dishes Section with Images -->
-  <section id="sweets" class="special-sweets-section">
-    <div class="sweet-dishes-header">
-      <h3><i class="fas fa-crown"></i> Amarjoti Eats Special Sweet Dishes <i class="fas fa-heart"></i></h3>
-      <p class="sweet-dishes-subtitle">Celebrate your special moments with our traditional homemade sweets, made with love and finest ingredients</p>
+<!-- Special Sweet Dishes Section -->
+<section id="sweets" class="special-sweets-section">
+  <div class="sweet-dishes-header">
+    <h3><i class="fas fa-crown"></i> Amarjoti Eats Special Sweet Dishes <i class="fas fa-heart"></i></h3>
+    <p class="sweet-dishes-subtitle">Celebrate your special moments with our traditional homemade sweets, made with love and finest ingredients</p>
+  </div>
+  
+  <div class="sweets-container">
+    <div class="sweet-item">
+      <img src="https://i.ytimg.com/vi/_6pc76DnDE0/maxresdefault.jpg" alt="Sweet Breads" class="sweet-image">
+      <h4 class="sweet-name">🍞 Sweet Breads</h4>
+      <p class="sweet-description">Soft, fluffy homemade sweet breads infused with cardamom and saffron, perfect for celebrations</p>
+      <div class="sweet-price">₹50 per piece</div>
     </div>
     
-    <div class="sweets-container">
-      <div class="sweet-item">
-        <img src="https://i.ytimg.com/vi/_6pc76DnDE0/maxresdefault.jpg" alt="Sweet Breads" class="sweet-image">
-        <h4 class="sweet-name">🍞 Sweet Breads</h4>
-        <p class="sweet-description">Soft, fluffy homemade sweet breads infused with cardamom and saffron, perfect for celebrations</p>
-        <div class="sweet-price">₹50 per piece</div>
-      </div>
-      
-      <div class="sweet-item">
-        <img src="https://media.istockphoto.com/id/692446072/photo/most-famous-indian-sweet-pudding-kheer-or-semiya-khir-in-a-bowl-selective-focus.jpg?s=612x612&w=0&k=20&c=EYeuMLOgqpcFRtrDJ8KPGdxPjlUOrBhUwgjzU0Jwt5k=" class="sweet-image">
-        <h4 class="sweet-name">🍜 Sewaiyan</h4>
-        <p class="sweet-description">Traditional vermicelli pudding cooked with milk, dry fruits, and aromatic spices - a festive favorite</p>
-        <div class="sweet-price">₹50 per serving</div>
-      </div>
-      
-      <div class="sweet-item">
-        <img src="https://shivanilovesfood.com/wp-content/uploads/2024/01/Creamy-Kheer-4.jpg" alt="Dry Fruits Kheer" class="sweet-image">
-        <h4 class="sweet-name">🍨 Dry Fruits Kheer</h4>
-        <p class="sweet-description">Rich rice pudding loaded with almonds, pistachios, cashews, and flavored with rose water.........</p>
-        <div class="sweet-price">₹50 per bowl</div>
-      </div>
+    <div class="sweet-item">
+      <img src="https://media.istockphoto.com/id/692446072/photo/most-famous-indian-sweet-pudding-kheer-or-semiya-khir-in-a-bowl-selective-focus.jpg?s=612x612&w=0&k=20&c=EYeuMLOgqpcFRtrDJ8KPGdxPjlUOrBhUwgjzU0Jwt5k=" class="sweet-image">
+      <h4 class="sweet-name">🍜 Sewaiyan</h4>
+      <p class="sweet-description">Traditional vermicelli pudding cooked with milk, dry fruits, and aromatic spices - a festive favorite</p>
+      <div class="sweet-price">₹50 per serving</div>
     </div>
     
-    <button class="sweets-cta" onclick="orderSweets()">
-      <i class="fab fa-whatsapp"></i> Order Sweet Dishes on WhatsApp
-    </button>
-    
-    <p class="sweets-notice">
-      <i class="fas fa-info-circle"></i> Available on order (24 hours advance notice required). Perfect for festivals, birthdays, and special occasions!
-    </p>
-  </section>
+    <div class="sweet-item">
+      <img src="https://shivanilovesfood.com/wp-content/uploads/2024/01/Creamy-Kheer-4.jpg" alt="Dry Fruits Kheer" class="sweet-image">
+      <h4 class="sweet-name">🍨 Dry Fruits Kheer</h4>
+      <p class="sweet-description">Rich rice pudding loaded with almonds, pistachios, cashews, and flavored with rose water</p>
+      <div class="sweet-price">₹50 per bowl</div>
+    </div>
+  </div>
+  
+  <button class="sweets-cta" onclick="orderSweets()">
+    <i class="fab fa-whatsapp"></i> Order Sweet Dishes on WhatsApp
+  </button>
+  
+  <p class="sweets-notice">
+    <i class="fas fa-info-circle"></i> Available on order (24 hours advance notice required). Perfect for festivals, birthdays, and special occasions!
+  </p>
+</section>
 
-   <div class="catering-info">
+<div class="catering-info">
   <p>
     Beyond our everyday tiffin delights, Amarjoti Eats proudly
     <u>offers catering services for small corporate events</u> — crafted with the same homemade care, taste, and hygiene you trust.
   </p>
 
-<p style="margin: 15px 0; font-weight: 600; text-align: center;">
-  🍽️ We provide <u>lunch and dinner services</u>
-</p>
+  <p style="margin: 15px 0; font-weight: 600; text-align: center;">
+    🍽️ We provide <u>lunch and dinner services</u>
+  </p>
 
   <p style="margin: 15px 0;">
     🍰 We also serve <u>delicious homemade sweets like kheer, sewaiyan, and sweet breads</u>, perfect for adding a sweet touch to your events.
@@ -1446,213 +1353,197 @@
   </p>
 </div>
 
-    <div class="call-now-container">
-      <a href="tel:+919646432566" class="call-button" id="fixedCallButton">
-        <i class="fas fa-phone"></i> Call Now: +91-9646432566
-      </a>
-<div class="timing-info" style="
-        background: #fff9e6;
-        border: 2px solid #f5b700;
-        border-radius: 10px;
-        padding: 15px;
-        margin-top: 15px;
-        text-align: center;
-        max-width: 500px;
-        box-shadow: 0 4px 8px rgba(245, 183, 0, 0.2);
-      ">
-        <h4 style="margin: 0 0 10px; color: #5c3d00; font-weight: 700;">
-          <i class="fas fa-clock"></i> Order Timing
-        </h4>
-        <p><i class="fas fa-sun"></i> Lunch Orders: 10:00 AM - 2:00 PM</p>
-        <p><i class="fas fa-moon"></i> Dinner Orders: 5:00 PM - 8:00 PM</p>
-   <p style="margin: 5px 0; font-weight: 600; color: #5c3d00;">
-         Kindly place your orders within these time slots to ensure timely delivery
-        </p>
-      </div>
-    </div>
-       <p class="note">Note: We are closed on Sundays. Apologies for any inconvenience.</p>
-    <div class="form-container">
-      <h3>Quick Inquiry</h3>
-      <form onsubmit="sendWhatsAppMessage(); return false;">
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="tel" id="phone" placeholder="Your Phone Number" required>
-        <button type="submit">Send on WhatsApp</button>
-<p style="margin-top: 15px; font-size: 1.1em; color: #5c3d00; font-weight: 600;">
-        <i class="fas fa-calendar-alt" style="color: #f5b700;"></i>
-        We share our daily lunch and dinner menu everyday on what's app!
-       To stay updated add us on what's app and never miss out on what's cooking.
-      </p>
-      </form>
-    </div>
-  </section>
-   <section id="reviews" class="section">
-    <h3>What Our Customers Say</h3>
-    <div class="reviews-container">
-      <div class="review-card">
-        <div class="review-header">
-          <div class="review-avatar">R</div>
-          <div>
-            <h4 class="review-name">Rajiv Sharma</h4>
-            <div class="review-date">May 15, 2025</div>
-          </div>
-        </div>
-        <div class="review-rating">★★★★★</div>
-        <p class="review-text">The food from Amarjoti Eats tastes just like home! As a bachelor living away from family, this tiffin service has been a blessing. The meals are always fresh and delicious.</p>
-      </div>
-      
-      <div class="review-card">
-        <div class="review-header">
-          <div class="review-avatar">S</div>
-          <div>
-            <h4 class="review-name">Simran Arora</h4>
-            <div class="review-date">May 10, 2025</div>
-          </div>
-        </div>
-        <div class="review-rating">★★★★★</div>
-        <p class="review-text">Their Sunday Special Thali is amazing! The variety and flavors remind me of my grandmother's cooking. Highly recommend to anyone looking for authentic Punjabi meals.</p>
-      </div>
-      
-      <div class="review-card">
-        <div class="review-header">
-          <div class="review-avatar">A</div>
-          <div>
-            <h4 class="review-name">Amit Kumar</h4>
-            <div class="review-date">May 5, 2025</div>
-          </div>
-        </div>
-        <div class="review-rating">★★★★☆</div>
-        <p class="review-text">Great value for money! The executive plan gives me enough food for lunch and sometimes even leftovers for evening. Hygienic packaging and timely delivery.</p>
-      </div>
-      
-      <div class="review-card">
-        <div class="review-header">
-          <div class="review-avatar">P</div>
-          <div>
-            <h4 class="review-name">Priya Singh</h4>
-            <div class="review-date">May 22, 2025</div>
-          </div>
-        </div>
-        <div class="review-rating">★★★★★</div>
-        <p class="review-text">We hired Amarjoti Eats for our office event and the catering was exceptional! The food was delicious, the setup was professional, and the tea and coffee service was a big hit. Will definitely use them again.</p>
-      </div>
-
-        <div class="review-card">
-        <div class="review-header">
-          <div class="review-avatar">P</div>
-          <div>
-            <h4 class="review-name">Shahbaaz Singh</h4>
-            <div class="review-date">May 22, 2025</div>
-          </div>
-        </div>
-        <div class="review-rating">★★★★★</div>
-        <p class="review-text">"Kheer ho, sewaiyan ho ya sweet breads – Amarjoti Eats ke sabhi sweets fresh, soft aur delicious hote hain. True homemade taste with great quality. Highly recommended!"</p>
-      </div>
-
-    </div>
-  </section>
-  <section id="contact" class="section">
-    <h3>Get in Touch</h3>
-    <div class="contact-info">
-      <a href="mailto:amarjotieats6@gmail.com">
-        <i class="fas fa-envelope icon"></i>
-        amarjotieats6@gmail.com
-      </a>
-      <a href="https://www.instagram.com/amarjotieats6" target="_blank">
-        <i class="fab fa-instagram icon"></i>
-        @amarjotieats6
-      </a>
-
-      <a href="tel:+919646432566" class="phone-link">
-        <i class="fas fa-phone icon"></i>
-        +91-9646432566
-        <span class="phone-tooltip">Tap to call us directly</span>
-      </a>
-    </div>
-
-  </section>
-  <footer role="contentinfo" aria-label="Site Footer" style="text-align:center; padding:20px; color:#5c3d00; font-weight:600; border-top:1px solid #f5b700;">
-    <p>&copy; <span id="currentYear"></span> Amarjoti Eats, Moga, Punjab</p>
-    <p>
-      <a href="#contact" style="color:#d84315; text-decoration:none;">Contact Us</a> |
-      <a href="#plans" style="color:#d84315; text-decoration:none;">Tiffin Plans</a> |
-      <a href="#sweets" style="color:#d84315; text-decoration:none;">Sweets</a> |
-      <a href="#reviews" style="color:#d84315; text-decoration:none;">Reviews</a>
+<div class="call-now-container">
+  <a href="tel:+919646432566" class="call-button" id="fixedCallButton">
+    <i class="fas fa-phone"></i> Call Now: +91-9646432566
+  </a>
+  
+  <div class="timing-info">
+    <h4 style="margin: 0 0 10px; color: #5c3d00; font-weight: 700;">
+      <i class="fas fa-clock"></i> Order Timing
+    </h4>
+    <p><i class="fas fa-sun"></i> Lunch Orders: 10:00 AM - 2:00 PM</p>
+    <p><i class="fas fa-moon"></i> Dinner Orders: 5:00 PM - 8:00 PM</p>
+    <p style="margin: 5px 0; font-weight: 600; color: #5c3d00;">
+      Kindly place your orders within these time slots to ensure timely delivery
     </p>
-  </footer>
+  </div>
+</div>
 
-  <div class="whatsapp-float">
-    <a href="https://wa.me/919646432566" target="_blank">
-      <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp">
+<p class="note">Note: We are closed on Sundays. Apologies for any inconvenience.</p>
+
+<div class="form-container">
+  <h3>Quick Inquiry</h3>
+  <form onsubmit="sendWhatsAppMessage(); return false;">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="tel" id="phone" placeholder="Your Phone Number" required>
+    <button type="submit">Send on WhatsApp</button>
+    <p style="margin-top: 15px; font-size: 1.1em; color: #5c3d00; font-weight: 600;">
+      <i class="fas fa-calendar-alt" style="color: #f5b700;"></i>
+      We share our daily lunch and dinner menu everyday on what's app!
+      To stay updated add us on what's app and never miss out on what's cooking.
+    </p>
+  </form>
+</div>
+
+<section id="reviews" class="section">
+  <h3>What Our Customers Say</h3>
+  <div class="reviews-container">
+    <div class="review-card">
+      <div class="review-header">
+        <div class="review-avatar">R</div>
+        <div>
+          <h4 class="review-name">Rajiv Sharma</h4>
+          <div class="review-date">May 15, 2025</div>
+        </div>
+      </div>
+      <div class="review-rating">★★★★★</div>
+      <p class="review-text">The food from Amarjoti Eats tastes just like home! As a bachelor living away from family, this tiffin service has been a blessing. The meals are always fresh and delicious.</p>
+    </div>
+    
+    <div class="review-card">
+      <div class="review-header">
+        <div class="review-avatar">S</div>
+        <div>
+          <h4 class="review-name">Simran Arora</h4>
+          <div class="review-date">May 10, 2025</div>
+        </div>
+      </div>
+      <div class="review-rating">★★★★★</div>
+      <p class="review-text">Their Sunday Special Thali is amazing! The variety and flavors remind me of my grandmother's cooking. Highly recommend to anyone looking for authentic Punjabi meals.</p>
+    </div>
+    
+    <div class="review-card">
+      <div class="review-header">
+        <div class="review-avatar">A</div>
+        <div>
+          <h4 class="review-name">Amit Kumar</h4>
+          <div class="review-date">May 5, 2025</div>
+        </div>
+      </div>
+      <div class="review-rating">★★★★☆</div>
+      <p class="review-text">Great value for money! The executive plan gives me enough food for lunch and sometimes even leftovers for evening. Hygienic packaging and timely delivery.</p>
+    </div>
+    
+    <div class="review-card">
+      <div class="review-header">
+        <div class="review-avatar">P</div>
+        <div>
+          <h4 class="review-name">Priya Singh</h4>
+          <div class="review-date">May 22, 2025</div>
+        </div>
+      </div>
+      <div class="review-rating">★★★★★</div>
+      <p class="review-text">We hired Amarjoti Eats for our office event and the catering was exceptional! The food was delicious, the setup was professional, and the tea and coffee service was a big hit. Will definitely use them again.</p>
+    </div>
+
+    <div class="review-card">
+      <div class="review-header">
+        <div class="review-avatar">P</div>
+        <div>
+          <h4 class="review-name">Shahbaaz Singh</h4>
+          <div class="review-date">May 22, 2025</div>
+        </div>
+      </div>
+      <div class="review-rating">★★★★★</div>
+      <p class="review-text">"Kheer ho, sewaiyan ho ya sweet breads – Amarjoti Eats ke sabhi sweets fresh, soft aur delicious hote hain. True homemade taste with great quality. Highly recommended!"</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <h3>Get in Touch</h3>
+  <div class="contact-info">
+    <a href="mailto:amarjotieats6@gmail.com">
+      <i class="fas fa-envelope icon"></i>
+      amarjotieats6@gmail.com
+    </a>
+    <a href="https://www.instagram.com/amarjotieats6" target="_blank">
+      <i class="fab fa-instagram icon"></i>
+      @amarjotieats6
+    </a>
+    <a href="tel:+919646432566" class="phone-link">
+      <i class="fas fa-phone icon"></i>
+      +91-9646432566
+      <span class="phone-tooltip">Tap to call us directly</span>
     </a>
   </div>
+</section>
 
-  <script>
-    // Set current year in footer
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
+<footer role="contentinfo" aria-label="Site Footer">
+  <p>&copy; <span id="currentYear"></span> Amarjoti Eats, Moga, Punjab</p>
+  <p>
+    <a href="#contact">Contact Us</a> |
+    <a href="#plans">Tiffin Plans</a> |
+    <a href="#sweets">Sweets</a> |
+    <a href="#reviews">Reviews</a>
+  </p>
+</footer>
+
+<div class="whatsapp-float">
+  <a href="https://wa.me/919646432566" target="_blank">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp">
+  </a>
+</div>
+
+<script>
+  // Set current year in footer
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
+  
+  // WhatsApp form submission
+  function sendWhatsAppMessage() {
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
     
-    // Show mobile notice only on mobile devices
-    const mobileCallNotice = document.getElementById('mobileCallNotice');
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-      mobileCallNotice.classList.add('visible');
+    if (!name || !phone) {
+      alert('Please enter both name and phone number.');
+      return;
     }
     
-    // Phone number click functionality - SIMPLIFIED
-    function handlePhoneClick(event) {
-      // On mobile devices, the tel: link will handle everything
-      if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        // On desktop, copy to clipboard
-        event.preventDefault();
-        const phoneNumber = '+919646432566';
-        navigator.clipboard.writeText(phoneNumber).then(() => {
-          alert('Phone number copied to clipboard: ' + phoneNumber);
-        }).catch(err => {
-          console.error('Failed to copy: ', err);
-          alert('Please manually copy the number: ' + phoneNumber);
+    const message = `Hello, my name is ${name}. I am interested in your tiffin service from Amarjoti Eats. Please contact me at ${phone}.`;
+    const url = `https://wa.me/919646432566?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  }
+  
+  // Sweet dishes order function
+  function orderSweets() {
+    const message = `Hello! I would like to order your special sweet dishes from Amarjoti Eats. Please let me know about availability and ordering details.`;
+    const url = `https://wa.me/919646432566?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  }
+  
+  // Smooth scrolling for navigation
+  document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 70,
+          behavior: 'smooth'
         });
       }
-    }
-    
-    // Add event listeners to all phone links
-    document.querySelectorAll('.phone-link').forEach(link => {
-      link.addEventListener('click', handlePhoneClick);
     });
-    
-    // WhatsApp form submission
-    function sendWhatsAppMessage() {
-      const name = document.getElementById('name').value.trim();
-      const phone = document.getElementById('phone').value.trim();
-      
-      if (!name || !phone) {
-        alert('Please enter both name and phone number.');
-        return;
-      }
-      
-      const message = `Hello, my name is ${name}. I am interested in your tiffin service from Amarjoti Eats. Please contact me at ${phone}.`;
-      const url = `https://wa.me/919646432566?text=${encodeURIComponent(message)}`;
-      window.open(url, '_blank');
-    }
-    
-    // Sweet dishes order function
-    function orderSweets() {
-      const message = `Hello! I would like to order your special sweet dishes from Amarjoti Eats. Please let me know about availability and ordering details.`;
-      const url = `https://wa.me/919646432566?text=${encodeURIComponent(message)}`;
-      window.open(url, '_blank');
-    }
-    
-    // Smooth scrolling for navigation
-    document.querySelectorAll('nav a').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop - 80,
-            behavior: 'smooth'
-          });
-        }
+  });
+  
+  // Phone number click functionality
+  function handlePhoneClick(event) {
+    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      event.preventDefault();
+      const phoneNumber = '+919646432566';
+      navigator.clipboard.writeText(phoneNumber).then(() => {
+        alert('Phone number copied to clipboard: ' + phoneNumber);
+      }).catch(err => {
+        console.error('Failed to copy: ', err);
+        alert('Please manually copy the number: ' + phoneNumber);
       });
-    });
-  </script>
+    }
+  }
+  
+  document.querySelectorAll('.phone-link').forEach(link => {
+    link.addEventListener('click', handlePhoneClick);
+  });
+</script>
 </body>
 </html>
