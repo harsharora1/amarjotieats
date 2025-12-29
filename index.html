@@ -162,41 +162,48 @@
       font-size: 1.05em;
     }
 
-    /* MADE IN MOGA BADGE */
-    .made-in-moga {
-      display: inline-block;
-      background: linear-gradient(135deg, #f5b700 0%, #d84315 100%);
-      color: white;
-      padding: 6px 20px;
-      border-radius: 30px;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      font-size: 1em;
-      margin: 5px auto 0;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      position: relative;
-      overflow: hidden;
-      transition: all 0.35s ease;
-      border: 2px solid #fff;
-      cursor: pointer;
-    }
+   /* MADE IN MOGA BADGE */
+.made-in-moga {
+  display: inline-block;
+  background: linear-gradient(135deg, #f5b700 0%, #d84315 100%);
+  color: white;
+  padding: 6px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 1em;
+  margin: 5px auto 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  border: 2px solid #fff;
+  cursor: pointer;
 
-    .made-in-moga:hover {
-      transform: translateY(-4px) scale(1.05);
-      box-shadow: 0 10px 25px rgba(216, 67, 21, 0.5);
-      background: linear-gradient(135deg, #d84315 0%, #f5b700 100%);
-    }
+  /* DISABLE TEXT SELECTION */
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
 
-    @keyframes locationBounce {
-      0% { transform: translateY(0); }
-      30% { transform: translateY(-5px); }
-      60% { transform: translateY(2px); }
-      100% { transform: translateY(0); }
-    }
+.made-in-moga:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(216, 67, 21, 0.5);
+  background: linear-gradient(135deg, #d84315 0%, #f5b700 100%);
+}
 
-    .made-in-moga:hover i {
-      animation: locationBounce 0.6s ease;
-    }
+@keyframes locationBounce {
+  0% { transform: translateY(0); }
+  30% { transform: translateY(-5px); }
+  60% { transform: translateY(2px); }
+  100% { transform: translateY(0); }
+}
+
+.made-in-moga:hover i {
+  animation: locationBounce 0.6s ease;
+}
+
 
     /* BANNERS - UPDATED */
     .july-banner {
@@ -1438,7 +1445,7 @@
 
 <div class="july-banner">
   <div class="july-banner-content">
-    <span><span class="date-highlight">Order Now🤩</span></span>
+    <span><span class="date-highlight">Order now for homemade tiffins and sweets 🤩</span></span>
   </div>
 </div>
 
