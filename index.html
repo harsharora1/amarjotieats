@@ -162,48 +162,141 @@
       font-size: 1.05em;
     }
 
-   /* MADE IN MOGA BADGE */
-.made-in-moga {
-  display: inline-block;
-  background: linear-gradient(135deg, #f5b700 0%, #d84315 100%);
-  color: white;
-  padding: 6px 20px;
-  border-radius: 30px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  font-size: 1em;
-  margin: 5px auto 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  position: relative;
-  overflow: hidden;
-  transition: all 0.35s ease;
-  border: 2px solid #fff;
-  cursor: pointer;
+    /* ZOMATO & SWIGGY SECTION */
+    .delivery-platforms {
+      text-align: center;
+      margin: 15px auto;
+      padding: 0 15px;
+    }
 
-  /* DISABLE TEXT SELECTION */
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-}
+    .platforms-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3em;
+      color: #5c3d00;
+      margin-bottom: 15px;
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
 
-.made-in-moga:hover {
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 10px 25px rgba(216, 67, 21, 0.5);
-  background: linear-gradient(135deg, #d84315 0%, #f5b700 100%);
-}
+    .platforms-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, #e23744, #fc8019);
+      border-radius: 2px;
+    }
 
-@keyframes locationBounce {
-  0% { transform: translateY(0); }
-  30% { transform: translateY(-5px); }
-  60% { transform: translateY(2px); }
-  100% { transform: translateY(0); }
-}
+    .platforms-container {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
 
-.made-in-moga:hover i {
-  animation: locationBounce 0.6s ease;
-}
+    .platform-card {
+      background: white;
+      border-radius: 12px;
+      padding: 15px 20px;
+      width: 140px;
+      text-align: center;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
 
+    .platform-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .platform-card.zomato {
+      border-color: #e23744;
+    }
+
+    .platform-card.swiggy {
+      border-color: #fc8019;
+    }
+
+    .platform-logo {
+      height: 40px;
+      width: auto;
+      margin-bottom: 10px;
+      object-fit: contain;
+    }
+
+    .platform-name {
+      font-weight: 700;
+      font-size: 1.1em;
+      margin-bottom: 5px;
+    }
+
+    .platform-card.zomato .platform-name {
+      color: #e23744;
+    }
+
+    .platform-card.swiggy .platform-name {
+      color: #fc8019;
+    }
+
+    .platform-status {
+      font-size: 0.85em;
+      color: #28a745;
+      font-weight: 600;
+      background: #f1f8e9;
+      padding: 3px 10px;
+      border-radius: 15px;
+      margin-top: 5px;
+    }
+
+    /* MADE IN MOGA BADGE */
+    .made-in-moga {
+      display: inline-block;
+      background: linear-gradient(135deg, #f5b700 0%, #d84315 100%);
+      color: white;
+      padding: 6px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      font-size: 1em;
+      margin: 5px auto 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.35s ease;
+      border: 2px solid #fff;
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+    }
+
+    .made-in-moga:hover {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 10px 25px rgba(216, 67, 21, 0.5);
+      background: linear-gradient(135deg, #d84315 0%, #f5b700 100%);
+    }
+
+    @keyframes locationBounce {
+      0% { transform: translateY(0); }
+      30% { transform: translateY(-5px); }
+      60% { transform: translateY(2px); }
+      100% { transform: translateY(0); }
+    }
+
+    .made-in-moga:hover i {
+      animation: locationBounce 0.6s ease;
+    }
 
     /* BANNERS - UPDATED */
     .july-banner {
@@ -244,32 +337,32 @@
     }
 
     .free-delivery-banner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  background: #ffe082;
-  color: #FF0000;
-  font-weight: 700;
-  font-size: 0.95em;
-  padding: 10px 15px;
-  border-radius: 10px;
-  margin: 10px auto 20px;
-  max-width: 320px;
-  box-shadow: 0 4px 8px rgba(216, 67, 21, 0.3);
-  transition: all 0.3s ease;   /* 👈 added */
-}
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: #ffe082;
+      color: #FF0000;
+      font-weight: 700;
+      font-size: 0.95em;
+      padding: 10px 15px;
+      border-radius: 10px;
+      margin: 10px auto 20px;
+      max-width: 320px;
+      box-shadow: 0 4px 8px rgba(216, 67, 21, 0.3);
+      transition: all 0.3s ease;
+    }
 
-.free-delivery-banner:hover {
-  background: #ffca28;        /* slightly darker yellow */
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(216, 67, 21, 0.4);
-}
+    .free-delivery-banner:hover {
+      background: #ffca28;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(216, 67, 21, 0.4);
+    }
 
-.free-delivery-banner img {
-  width: 28px;
-  height: 28px;
-}
+    .free-delivery-banner img {
+      width: 28px;
+      height: 28px;
+    }
 
     /* LOGO & TAGLINE */
     .logo-container {
@@ -412,19 +505,6 @@
       width: 100%;
     }
 
-    /* UPDATED HOVER COLORS AS REQUESTED */
-    .hero-word:hover:nth-child(1) {
-      /* Yellow for Healthy */
-    }
-
-    .hero-word:hover:nth-child(2) {
-     /* Yellow for Hygienic */
-    }
-
-    .hero-word:hover:nth-child(3) {
-     /* Yellow for Homemade ONLY on hover */
-    }
-
     .hero-word span {
       display: inline-block;
       transition: transform 0.3s ease, color 0.3s ease;
@@ -456,15 +536,15 @@
       }
       
       .hero-dot:nth-child(2) {
-        background: #f5b700; /* Yellow for Healthy */
+        background: #f5b700;
       }
       
       .hero-dot:nth-child(4) {
-        background: #f5b700; /* Yellow for Hygienic */
+        background: #f5b700;
       }
       
       .hero-dot:nth-child(6) {
-        background: #f5b700; /* Yellow for Homemade */
+        background: #f5b700;
       }
       
       .hero-word:hover + .hero-dot,
@@ -1291,6 +1371,16 @@
       .sweet-image {
         height: 220px;
       }
+      
+      /* Platform cards on tablet */
+      .platforms-container {
+        gap: 40px;
+      }
+      
+      .platform-card {
+        width: 160px;
+        padding: 20px;
+      }
     }
 
     @media (min-width: 768px) {
@@ -1321,6 +1411,15 @@
       /* Even larger sweet images on desktop */
       .sweet-image {
         height: 240px;
+      }
+      
+      /* Platform cards on desktop */
+      .platforms-container {
+        gap: 50px;
+      }
+      
+      .platform-card {
+        width: 180px;
       }
     }
 
@@ -1399,6 +1498,20 @@
       .sweet-image {
         height: 180px;
       }
+      
+      /* Platform cards on mobile */
+      .platform-card {
+        width: 130px;
+        padding: 12px 15px;
+      }
+      
+      .platform-logo {
+        height: 35px;
+      }
+      
+      .platform-name {
+        font-size: 1em;
+      }
     }
 
     @media (min-width: 400px) and (max-width: 479px) {
@@ -1434,6 +1547,22 @@
 <div class="fssai-badge">
   <img src="https://freepnglogo.com/images/all_img/1707841493fssai-logo-png.png" alt="FSSAI Logo" class="fssai-logo">
   <span class="fssai-text">License No: <span class="fssai-number">22125030001272</span></span>
+</div>
+
+<!-- ZOMATO & SWIGGY SECTION -->
+<div class="delivery-platforms">
+  <h3 class="platforms-title">Also Available On</h3>
+  <div class="platforms-container">
+    <div class="platform-card zomato">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Zomato_logo.png" alt="Zomato Logo" class="platform-logo">
+      <div class="platform-name">Zomato</div>
+    </div>
+    
+    <div class="platform-card swiggy">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Swiggy_logo.png" alt="Swiggy Logo" class="platform-logo">
+      <div class="platform-name">Swiggy</div>
+    </div>
+  </div>
 </div>
 
 <!-- Made in Moga Badge -->
@@ -1780,6 +1909,35 @@
     const url = `https://wa.me/919646432566?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
   }
+  
+  // Platform order functions
+  function orderZomato() {
+    // Replace with actual Zomato link when available
+    const zomatoLink = '#'; // Add your Zomato restaurant link here
+    window.open(zomatoLink, '_blank');
+  }
+  
+  function orderSwiggy() {
+    // Replace with actual Swiggy link when available
+    const swiggyLink = '#'; // Add your Swiggy restaurant link here
+    window.open(swiggyLink, '_blank');
+  }
+  
+  // Add click events to platform cards
+  document.addEventListener('DOMContentLoaded', function() {
+    const zomatoCard = document.querySelector('.platform-card.zomato');
+    const swiggyCard = document.querySelector('.platform-card.swiggy');
+    
+    if (zomatoCard) {
+      zomatoCard.addEventListener('click', orderZomato);
+      zomatoCard.style.cursor = 'pointer';
+    }
+    
+    if (swiggyCard) {
+      swiggyCard.addEventListener('click', orderSwiggy);
+      swiggyCard.style.cursor = 'pointer';
+    }
+  });
   
   // Smooth scrolling for navigation
   document.querySelectorAll('nav a').forEach(anchor => {
