@@ -162,7 +162,7 @@
       font-size: 1.05em;
     }
 
-    /* ZOMATO & SWIGGY SECTION */
+    /* ZOMATO & SWIGGY SECTION - UPDATED */
     .delivery-platforms {
       text-align: center;
       margin: 15px auto;
@@ -212,6 +212,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      cursor: default; /* Changed from pointer to default */
     }
 
     .platform-card:hover {
@@ -232,6 +233,7 @@
       width: auto;
       margin-bottom: 10px;
       object-fit: contain;
+      pointer-events: none; /* Prevent clicking on logo */
     }
 
     .platform-name {
@@ -1549,7 +1551,7 @@
   <span class="fssai-text">License No: <span class="fssai-number">22125030001272</span></span>
 </div>
 
-<!-- ZOMATO & SWIGGY SECTION -->
+<!-- ZOMATO & SWIGGY SECTION - UPDATED WITH NON-CLICKABLE CARDS -->
 <div class="delivery-platforms">
   <h3 class="platforms-title">Also Available On</h3>
   <div class="platforms-container">
@@ -1909,35 +1911,6 @@
     const url = `https://wa.me/919646432566?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
   }
-  
-  // Platform order functions
-  function orderZomato() {
-    // Replace with actual Zomato link when available
-    const zomatoLink = '#'; // Add your Zomato restaurant link here
-    window.open(zomatoLink, '_blank');
-  }
-  
-  function orderSwiggy() {
-    // Replace with actual Swiggy link when available
-    const swiggyLink = '#'; // Add your Swiggy restaurant link here
-    window.open(swiggyLink, '_blank');
-  }
-  
-  // Add click events to platform cards
-  document.addEventListener('DOMContentLoaded', function() {
-    const zomatoCard = document.querySelector('.platform-card.zomato');
-    const swiggyCard = document.querySelector('.platform-card.swiggy');
-    
-    if (zomatoCard) {
-      zomatoCard.addEventListener('click', orderZomato);
-      zomatoCard.style.cursor = 'pointer';
-    }
-    
-    if (swiggyCard) {
-      swiggyCard.addEventListener('click', orderSwiggy);
-      swiggyCard.style.cursor = 'pointer';
-    }
-  });
   
   // Smooth scrolling for navigation
   document.querySelectorAll('nav a').forEach(anchor => {
